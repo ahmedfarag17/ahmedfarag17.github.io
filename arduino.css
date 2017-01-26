@@ -1,0 +1,37 @@
+.img1{
+  padding-top: 50px;
+  padding-left: 80px;
+  padding-right: 30px;
+  width: 20%;
+  height: 30%;
+}
+
+p{
+  padding-right: 70px;
+  padding-left: 70px;
+  color: #443235;
+  font-family: "DomaineText",Georgia,serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+p.last{
+  padding-bottom: 40px;
+}
+
+h1{
+  font-family: "DomaineText",Georgia,serif;
+  font-weight: normal;
+  font-style: normal;
+  padding-top: 50px;
+  padding-left: 100px;
+}
+
+a{
+  color: #443235;
+}
+
+.lower{
+  height: 80%;
+}

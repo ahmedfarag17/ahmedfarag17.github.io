@@ -1,0 +1,57 @@
+<!--DOCTYPE HTML-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Work Experience | Ahmed Farag</title>
+    <link rel="icon" href="images/a2.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="experience.css">
+    <script>
+    function myFunction() {
+      document.getElementById("dropDown").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if(event.target.id != ("projects")){
+        console.log("true");
+          var dropDowns = document.getElementById("dropDown");
+          if (dropDowns.classList.contains('show')) {
+            dropDowns.classList.remove('show');
+          }
+      }
+
+    }
+
+    function transfer(elem){
+      if(elem == "about"){
+        location.href = "about.html";
+      }else{
+        location.href = "experience.html";
+      }
+    }
+    </script>
+  </head>
+
+  <body>
+    <div class="menu">
+      <button name="home" onclick="transfer('about')">About Me</button><button id="projects" onclick="myFunction()">Projects</button><button name="work" onclick="transfer('work')">Work</button><button name="Contact" onclick="location.href = 'https://www.linkedin.com/in/ahmed-farag-18b715a2';">Contact Me</button>
+      <div id="dropDown" class="dropDown">
+        <a href="java.html">Java</a>
+        <a href="c.html">C</a>
+        <a href="arduino.html">Arduino</a>
+        <a href="webdev.html">Web Dev</a>
+      </div>
+    </div>
+    <div class="lower">
+    <h1><u>WORK EXPERIENCE</u><h1>
+    <img src="images/atlantic.jpg" align="left" class="img1"><h2>Atlantic Health Systems</h2><p>My position on the Atlantic Health team was an <i>Information Support Specialist</i> which dealt with educating our patients and visitors about the various health technology resources available to them to help lead a healthier lifestyle. Products ranged from Activity Trackers to Wireless blood pressure monitors as well as many apps available to them on the App Store/Google Play Store.</p>
+    <p> I also played a role in the development and support of the wayfinding application <i>Take Me There - Overlook</i>. I helped/advised in the testing of the wayfinding application in its pre- release phase and monitored any changes or updates that needed to be made post-release.</p>
+    <hr>
+    <img src="images/wsa.png" align="left" class="img2"><h2 class="wsa">Weekend Student Adventures</h2><p>During my study abroad experience I decided to take an internship with Weekend Student Adventure or WSA. Their initiative was to provide package trips to students such as myself studying abroad for an affordable price and included everything from hostels to activities, all they had to do was arrange their own way of get to and from the destination. My role on the team was to maintain the companies social media pages by posting effective updates about trips to branch the brand to multiple countries across Europe.
+    I worked with the WSA team across the countries to collectively determine cost effective advertisement campaigns. I also had the opportunity to work on their iOS application where I provided the app developers with extensive outlines for content within the WSA app and gave feedback on errors that needed updating/fixing.</p>
+    <hr>
+    <img src="images/keller.jpg" align="left" class="img3"><h2 class="wsa">The Keller League</h2><p class="last"> The Keller League is a Rutgers owned fraternity intramural organization. We set up different sporting tournaments exclusively for the fraternaties at Rutgers. I started out as a data tracker which required me to actively record data that the league required play by play as well as keep efficient notes pertaining to infractions and misconduct for weekly reports. I eventually worked my way up to become league supervisor which gave me the responsabilities of ensuring proper and efficient function of the staff as a whole to deliver the most effective experience for clients. I also held weekly meetings with office staff to ensure all paper work required for the league was in order and ready for use and uploaded into our database. </p>
+</html>

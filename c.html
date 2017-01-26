@@ -1,0 +1,61 @@
+<!--DOCTYPE HTML-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Ahmed Farag</title>
+    <link rel="icon" href="images/a2.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="c.css">
+    <script>
+    function myFunction() {
+      document.getElementById("dropDown").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if(event.target.id != ("projects")){
+        console.log("true");
+          var dropDowns = document.getElementById("dropDown");
+          if (dropDowns.classList.contains('show')) {
+            dropDowns.classList.remove('show');
+          }
+      }
+
+    }
+
+    function transfer(elem){
+      if(elem == "about"){
+        location.href = "about.html";
+      }else{
+        location.href = "experience.html";
+      }
+    }
+    </script>
+  </head>
+
+  <body>
+    <div class="menu">
+      <button name="home" onclick="transfer('about')">About Me</button><button id="projects" onclick="myFunction()">Projects</button><button name="work" onclick="transfer('work')">Work</button><button name="Contact" onclick="location.href = 'https://www.linkedin.com/in/ahmed-farag-18b715a2';">Contact Me</button>
+      <div id="dropDown" class="dropDown">
+        <a href="java.html">Java</a>
+        <a href="c.html">C</a>
+        <a href="arduino.html">Arduino</a>
+        <a href="webdev.html">Web Dev</a>
+      </div>
+    </div>
+    <div class="lower">
+      <img src="images/c.png" align="left" class="img1"><h1>Y86 Emulator</h1><p>C was the second major language I picked up and stuck with for quite some time. It has really helped me understand the inner workings of a machine due to it being a low-level language. I have discovered how each stack grows, how methods appear in the frame which you have to be mindful of with C because of black-hat hacking, and even the intricacies of how memory is stored and managed. It is a very powerful language which coming from Java freightend me a little but after time using it I discovered how much I could actually do with it.</p>
+      <p>The first big project I built with C was a Y86 emulator. This emulator would take in the machine code from a program and translate it/perform the assembly commands it had. For the project I had to build a block of memory for the code which it had the different components of memory such as the text area, the heap, stack, and even some registers. The programs that were run on the emulator were a decrypted code that told you what you needed to do in class and a fibonnaci generator that took in a number and gave you the fibonnaci number at that location.</p>
+      <hr>
+      <h1>Malloc/Free</h1><p>Malloc and Free were the next two big things I focused on using C. The project was simple, recreate malloc and free without calling the functions. The file would then be imported into a program that used our functions of malloc and free to do som work with them. The way we did this was had a block of memory as a global variable with around 5000 bytes allocated to it already. When someone would call we would check the meta data at each block in the memory and see if it was free and could hold the amount they were asking for. If so they pointer to that memory location would be given to the user.
+        This was a simple project but it really helped me to understand the "in's and out's" of malloc and free and the different ways that they could potentially find the spot for a malloc request.</p>
+      <hr>
+      <h1>File Emulation</h1><p>This project sort of plays on the Java project I worked on that dealt with file transfers. This time we had a server that listened for connections from a user that wanted to do some work on a remote file in the system. They could ask the server to open a file, read from a file, write to a file, or close the file. The server had space for about 20 users to be joined at the same time but this number could have been changed easily. This project allowed me to understand truly how multi-threading really worked such as if the 2 threads are on the same core they are not truly running in parallel but actually switching quickly between one another.
+      <hr>
+      <h1>Compiler/Parser</h1><p class="last">The final C project I worked on was a mix of a Compiler and a Parser. I solely worked on the parser while the professor wrote up the compiler which would turn the code into runnable code. The goal was to make an LL1 parse diagram of the given language where we could then implement it easily as a FSM within the program. Each state was a different symbol in the language and one state would pass a new symbol if it didn't violate the language to the next step in the machine or it would return an error like a compiler would do.</p>
+    </div>
+  </body>
+
+</html>

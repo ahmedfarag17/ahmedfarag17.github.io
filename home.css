@@ -1,0 +1,111 @@
+body {
+  background-image:url(images/computer.png);
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
+
+}
+
+.menu{
+  background-color: rgba(0,0,0,0.3);
+  width: 40%;
+  height: 40px;
+  padding-left: 10px;
+  border-radius: 6px;
+  margin: -10 auto;
+  z-index: 49;
+  text-align: center;
+
+}
+
+.name{
+  background: rgba(0,0,0,0.6);
+
+  font-size: 40px;
+  position: relative;
+    top: 35%;
+    margin-left: 25%;
+    width: 50%;
+    height: 150px;
+    border-radius: 5px;
+    animation-duration: 2s;
+    animation-name: slideInBottom;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-name: slideInBottom;
+
+}
+
+.inner{
+
+  font-family: "Futura pt";
+  color: white;
+  font-size: 70px;
+  position: relative;
+  padding: 35px;
+  padding-left: 100px;
+}
+
+button{
+  height: 30px;
+  font-size: 14px;
+  color: white;
+  display: inline-block;
+  background-color: transparent;
+  border-color: transparent;
+  outline: none;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+}
+
+button:hover{
+  width: auto;
+  height: 30px;
+  font-size: 14px;
+display: inline-block;
+  border-color: transparent;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+canvas{
+  margin-top: -150px;
+  width: 90%;
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 178px;
+    background-color: rgba(0,0,0,0.3);
+    min-width: 100px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    color: white;
+    background-color: rgba(0,0,0,0.4);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.show {display:block;}
+
+@keyframes slideInBottom {
+    0%{
+      top:100%;
+    }
+    100%{
+      top:35%;
+    }
+}

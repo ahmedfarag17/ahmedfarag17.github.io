@@ -1,0 +1,57 @@
+<!--DOCTYPE HTML-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Ahmed Farag</title>
+    <link rel="icon" href="images/a2.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="arduino.css">
+    <script>
+    function myFunction() {
+      document.getElementById("dropDown").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if(event.target.id != ("projects")){
+        console.log("true");
+          var dropDowns = document.getElementById("dropDown");
+          if (dropDowns.classList.contains('show')) {
+            dropDowns.classList.remove('show');
+          }
+      }
+
+    }
+
+    function transfer(elem){
+      if(elem == "about"){
+        location.href = "about.html";
+      }else{
+        location.href = "experience.html";
+      }
+    }
+    </script>
+  </head>
+
+  <body>
+    <div class="menu">
+      <button name="home" onclick="transfer('about')">About Me</button><button id="projects" onclick="myFunction()">Projects</button><button name="work" onclick="transfer('work')">Work</button><button name="Contact" onclick="location.href = 'https://www.linkedin.com/in/ahmed-farag-18b715a2';">Contact Me</button>
+      <div id="dropDown" class="dropDown">
+        <a href="java.html">Java</a>
+        <a href="c.html">C</a>
+        <a href="arduino.html">Arduino</a>
+        <a href="webdev.html">Web Dev</a>
+      </div>
+    </div>
+    <div class="lower">
+      <img src="images/smartchair.jpg" class="img1" align="left"><h1>Smart Chair</h1>
+      <p>The smart chair was design by a group of senior Engineering Majors for their file project. The design was made to help people that have poor posture while sitting down at their desk. They collected a lot of data to figure out the critical angle of the spine as well as the desired height of the elbows.
+        With all this data the chair is able to find out if the user is sitting in a good posture or not via pressure sensors and make adjustments to the lumbar and arm supports.</p>
+        <p class="last"> To make all of this happen one of the engineers and I worked together to code the functionality of the chair. We started out by drawing out the plan and the finite state machine that the chair would follow. From there we coded in the arduino platform specifically to our plan by using each state as a check point.
+          Once one state was finished it would go to the next one until it reached the accepting state. There it would wait to see if the user got up or changed positions where it would need to make adjustments to the supports. This was an amazing opportunity to work on because it provided a real life benefit and I was able to make something physical come to life.
+    </div>
+  </body>
+
+</html>
