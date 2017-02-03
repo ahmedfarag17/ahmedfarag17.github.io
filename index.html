@@ -5,53 +5,51 @@
     <meta charset="utf-8">
     <title>Ahmed Farag</title>
     <link rel="icon" href="images/a2.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="http://domain.tld/screen.css" type="text/css" media="Screen" />
     <link rel="stylesheet" href="http://domain.tld/mobile.css" type="text/css" media="handheld" />
-    <script src="p5.js" type="text/javascript"></script>
-    <script src="cell.js" type="text/javascript"></script>
-    <script src="sketch.js" type="text/javascript"></script>
-    <script>
-    function myFunction() {
-      document.getElementById("dropDown").classList.toggle("show");
-    }
 
-    window.onclick = function(event) {
-      if(event.target.id != ("projects")){
-        console.log("true");
-          var dropDowns = document.getElementById("dropDown");
-          if (dropDowns.classList.contains('show')) {
-            dropDowns.classList.remove('show');
-          }
-      }
-
-    }
-
-    function transfer(elem){
-      if(elem == "about"){
-        location.href = "about.html";
-      }else{
-        location.href = "experience.html";
-      }
-    }
-    </script>
   </head>
 
   <body>
-    <div class="menu">
-      <button name="home" onclick="transfer('about')">About Me</button><button id="projects" onclick="myFunction()">Projects</button><button name="work" onclick="transfer('work')">Work</button><button name="Contact" onclick="location.href = 'https://www.linkedin.com/in/ahmed-farag-18b715a2';">Contact Me</button>
-      <div id="dropDown" class="dropDown">
-        <a href="java.html">Java</a>
-        <a href="c.html">C</a>
-        <a href="arduino.html">Arduino</a>
-        <a href="webdev.html">Web Dev</a>
-      </div>
+
+    <span class="menubutton" onclick="openNav()">&#9776;</span>
+    <div id="menu" class="menu">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <ul class="list">
+        <li><a href="about.html">About</a></li>
+        <li><a href="java.html">Java</a></li>
+        <li><a href="c.html">C</a></li>
+        <li><a href="arduino.html">Arduino</a></li>
+        <li><a href="webdev.html">Web Dev</a></li>
+        <li><a href="experience.html">Work</a></li>
+        <li><a href="https://www.linkedin.com/in/ahmed-farag-18b715a2">Contact</a></li>
+      </ul>
     </div>
-    <div class="name">
+    <div id="name" class="name">
       <div class="inner">
         AHMED FARAG
       </div>
     </div>
+
+    <script src="p5.js" type="text/javascript"></script>
+    <script src="cell.js" type="text/javascript"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+    function openNav() {
+    document.getElementById("menu").style.width = "200px";
+    document.getElementById("name").style.marginLeft = "40%";
+    document.getElementById("menu").style.transition = "0.5s ease";
+    document.getElementById("name").style.transition = "0.5s ease";
+    }
+
+    function closeNav() {
+        document.getElementById("menu").style.width = "0";
+        document.getElementById("name").style.marginLeft= "25%";
+    }
+    </script>
   </body>
 
 </html>

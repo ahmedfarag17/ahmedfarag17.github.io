@@ -7,25 +7,29 @@ body {
 }
 
 .menu{
-  background-color: rgba(0,0,0,0.3);
-  width: 40%;
+
+  width: 40vw;
   height: 40px;
   padding-left: 10px;
-  border-radius: 6px;
-  margin: -10 auto;
-  z-index: 49;
+  float: none;
+  margin: 30 auto;
   text-align: center;
+
+}
+
+.menu ul li{
+  list-style: none;
+  float: left;
 
 }
 
 .name{
   background: rgba(0,0,0,0.6);
 
-  font-size: 40px;
-  position: relative;
-    top: 35%;
+    position: relative;
+    top: 30%;
     margin-left: 25%;
-    width: 50%;
+    width: 50vw;
     height: 150px;
     border-radius: 5px;
     animation-duration: 2s;
@@ -39,37 +43,22 @@ body {
 
   font-family: "Futura pt";
   color: white;
-  font-size: 70px;
+  font-size: 5vw;
   position: relative;
   padding: 35px;
   padding-left: 100px;
 }
 
-button{
-  height: 30px;
-  font-size: 14px;
-  color: white;
-  width: auto;
-  background-color: transparent;
-  border-color: transparent;
-  outline: none;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 10px;
+.closebtn{
+  display: none;
 }
 
-button:hover{
-  width: auto;
-  height: 30px;
-  font-size: 14px;
-display: inline-block;
-  border-color: transparent;
-  cursor: pointer;
-  text-decoration: underline;
-}
+
+
+
 
 canvas{
-  margin-top: -150px;
+  margin-top: -200px;
   width: 90%;
 }
 
@@ -84,19 +73,78 @@ canvas{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.dropdown a {
+a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
-    display: block;
+    float: none;
+
 }
 
-.dropdown a:hover {
+.menubutton{
+  font-size: 50px;
+  float: left;
+  padding-left: 30px;
+  padding-top: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+a:hover {
     color: white;
-    background-color: rgba(0,0,0,0.4);
     padding: 12px 16px;
-    text-decoration: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1360px){
+
+  .menubutton{
     display: block;
+  }
+
+  .closebtn{
+    display: block;
+    float: right;
+    font-size: 40px;
+  }
+
+  .closebtn:hover{
+    text-decoration: none;
+  }
+
+  .menu{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    display: block;
+    top: 0;
+    margin: 0;
+    left: -7;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+
+  }
+
+
+  li{
+    padding-top: 15px;
+
+	display:block;
+	width:130px;
+	text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+
+    text-align: center;
+
+
+  }
+
+
+
 }
 
 .show {display:block;}
@@ -106,6 +154,6 @@ canvas{
       top:100%;
     }
     100%{
-      top:35%;
+      top:30%;
     }
 }
