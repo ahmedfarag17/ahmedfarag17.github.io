@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Ahmed Farag</title>
     <link rel="icon" href="images/a2.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="c.css">
@@ -42,15 +43,20 @@
   </head>
 
   <body>
-    <div class="menu">
-      <button name="home" onclick="transfer('about')">About Me</button><button id="projects" onclick="myFunction()">Projects</button><button name="work" onclick="transfer('work')">Work</button><button name="Contact" onclick="location.href = 'https://www.linkedin.com/in/ahmed-farag-18b715a2';">Contact Me</button>
-      <div id="dropDown" class="dropDown">
-        <a href="java.html">Java</a>
-        <a href="c.html">C</a>
-        <a href="arduino.html">Arduino</a>
-        <a href="webdev.html">Web Dev</a>
+    <span class="menubutton" onclick="openNav()">&#9776;</span>
+
+    <div id="menu" class="menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul class="list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="java.html">Java</a></li>
+          <li><a href="c.html">C</a></li>
+          <li><a href="arduino.html">Arduino</a></li>
+          <li><a href="webdev.html">Web Dev</a></li>
+          <li><a href="experience.html">Work</a></li>
+          <li><a href="https://www.linkedin.com/in/ahmed-farag-18b715a2">Contact</a></li>
+        </ul>
       </div>
-    </div>
     <div class="lower">
       <img src="images/c.png" align="left" class="img1"><h1>Y86 Emulator</h1><p>C was the second major language I picked up and stuck with for quite some time. It has really helped me understand the inner workings of a machine due to it being a low-level language. I have discovered how each stack grows, how methods appear in the frame which you have to be mindful of with C because of black-hat hacking, and even the intricacies of how memory is stored and managed. It is a very powerful language which coming from Java freightend me a little but after time using it I discovered how much I could actually do with it.</p>
       <p>The first big project I built with C was a Y86 emulator. This emulator would take in the machine code from a program and translate it/perform the assembly commands it had. For the project I had to build a block of memory for the code which it had the different components of memory such as the text area, the heap, stack, and even some registers. The programs that were run on the emulator were a decrypted code that told you what you needed to do in class and a fibonnaci generator that took in a number and gave you the fibonnaci number at that location.</p>
@@ -62,6 +68,17 @@
       <hr>
       <h1>Compiler/Parser</h1><p class="last">The final C project I worked on was a mix of a Compiler and a Parser. I solely worked on the parser while the professor wrote up the compiler which would turn the code into runnable code. The goal was to make an LL1 parse diagram of the given language where we could then implement it easily as a FSM within the program. Each state was a different symbol in the language and one state would pass a new symbol if it didn't violate the language to the next step in the machine or it would return an error like a compiler would do.</p>
     </div>
+    <script>
+    function openNav() {
+    document.getElementById("menu").style.width = "200px";
+    document.getElementById("menu").style.transition = "0.5s ease";
+    }
+
+    function closeNav() {
+        document.getElementById("menu").style.width = "0";
+        document.getElementById("menu").style.transition = "0.5s ease";
+    }
+    </script>
   </body>
 
 </html>

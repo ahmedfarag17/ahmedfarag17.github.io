@@ -1,4 +1,5 @@
 body {
+
   background-image:url(images/computer.png);
   background-repeat:no-repeat;
   background-attachment: fixed;
@@ -6,83 +7,13 @@ body {
 
 }
 
-.menu{
-
-  width: 40vw;
-  height: 40px;
-  padding-left: 10px;
-  float: none;
-  margin: 30 auto;
-  text-align: center;
-
-}
-
-.menu ul li{
-  list-style: none;
-  float: left;
-
-}
-
-.name{
-  background: rgba(0,0,0,0.6);
-
-    position: relative;
-    top: 30%;
-    margin-left: 25%;
-    width: 50vw;
-    height: 150px;
-    border-radius: 5px;
-    animation-duration: 2s;
-    animation-name: slideInBottom;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-name: slideInBottom;
-
-}
-
-.inner{
-
-  font-family: "Futura pt";
-  color: white;
-  font-size: 5vw;
-  position: relative;
-  padding: 35px;
-  padding-left: 100px;
-}
 
 .closebtn{
   display: none;
 }
 
-
-
-
-
-canvas{
-  margin-top: -200px;
-  width: 90%;
-}
-
-.dropdown{
-    display: none;
-    position: absolute;
-    margin-top: 10px;
-    margin-left: 178px;
-    background-color: rgba(0,0,0,0.3);
-    min-width: 100px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    float: none;
-
-}
-
 .menubutton{
-  font-size: 50px;
+  font-size: 40px;
   float: left;
   padding-left: 30px;
   padding-top: 20px;
@@ -90,14 +21,59 @@ a {
   cursor: pointer;
 }
 
-a:hover {
-    color: white;
-    padding: 12px 16px;
-    cursor: pointer;
-    text-decoration: underline;
+.menu{
+  margin-top: 30;
 }
 
-@media screen and (max-width: 1360px){
+ul{
+  text-align: center;
+  list-style: none;
+}
+
+li{
+  margin: 0;
+  display: inline-block;
+}
+
+li a{
+  float: left;
+  padding-right: 15px;
+  color: white;
+  font-weight: 100;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+
+li a:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.inner{
+  font-family: "Futura pt";
+  color: white;
+  font-size: 5vw;
+
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+
+
+}
+
+.name{
+
+  animation-duration: 2s;
+  animation-name: slideInBottom;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name: slideInBottom;
+
+}
+
+@media screen and (max-width: 480px){
 
   .menubutton{
     display: block;
@@ -106,11 +82,15 @@ a:hover {
   .closebtn{
     display: block;
     float: right;
+    color: #818181;
+    text-decoration: none;
     font-size: 40px;
+    margin-top:-20%;
+    padding-right: 10px;
   }
 
   .closebtn:hover{
-    text-decoration: none;
+    cursor: pointer;
   }
 
   .menu{
@@ -128,9 +108,15 @@ a:hover {
 
   }
 
+  ul{
+    margin-top: -20%;
+  }
 
+  li a{
+    display: block;
+  }
   li{
-    padding-top: 15px;
+    padding-top: 40px;
 
 	display:block;
 	width:130px;
@@ -145,15 +131,4 @@ a:hover {
 
 
 
-}
-
-.show {display:block;}
-
-@keyframes slideInBottom {
-    0%{
-      top:100%;
-    }
-    100%{
-      top:30%;
-    }
 }

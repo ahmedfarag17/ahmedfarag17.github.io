@@ -1,0 +1,65 @@
+body {
+
+  background-image:url(images/computer.png);
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
+
+}
+
+.closebtn{
+  display: none;
+}
+
+.menubutton{
+  display: none;
+}
+
+.menu{
+  margin-top: 30;
+}
+
+ul{
+  text-align: center;
+  list-style: none;
+}
+
+li{
+  margin: 0;
+  display: inline-block;
+}
+
+li a{
+  float: left;
+  padding-right: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+li a:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.inner{
+  font-family: "Futura pt";
+  color: white;
+  font-size: 5vw;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+
+
+}
+
+.name{
+
+  animation-duration: 2s;
+  animation-name: slideInBottom;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name: slideInBottom;
+
+}

@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Ahmed Farag</title>
     <link rel="icon" href="images/a2.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="webdev.css">
@@ -42,15 +43,20 @@
   </head>
 
   <body>
-    <div class="menu">
-      <button name="home" onclick="transfer('about')">About Me</button><button id="projects" onclick="myFunction()">Projects</button><button name="work" onclick="transfer('work')">Work</button><button name="Contact" onclick="location.href = 'https://www.linkedin.com/in/ahmed-farag-18b715a2';">Contact Me</button>
-      <div id="dropDown" class="dropDown">
-        <a href="java.html">Java</a>
-        <a href="c.html">C</a>
-        <a href="arduino.html">Arduino</a>
-        <a href="webdev.html">Web Dev</a>
+     <span class="menubutton" onclick="openNav()">&#9776;</span>
+
+    <div id="menu" class="menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul class="list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="java.html">Java</a></li>
+          <li><a href="c.html">C</a></li>
+          <li><a href="arduino.html">Arduino</a></li>
+          <li><a href="webdev.html">Web Dev</a></li>
+          <li><a href="experience.html">Work</a></li>
+          <li><a href="https://www.linkedin.com/in/ahmed-farag-18b715a2">Contact</a></li>
+        </ul>
       </div>
-    </div>
     <div class="lower">
       <h1><u>The College Chooser</u></h1><img src="images/tcc.png" class="img1" align="center"><p>The College Chooser is a site I designed and built to help students who need to consider their financial situation when choosing a college. It could also be used by students already in college and would like to estimate
       how long it will take them to pay off their loans. To use the website, all you need to do is enter in the college name as well as your major, whether you will move into an apartment after college, and how much percent of your pay check you are willing to put towards paying off those loans. Once you click the <i>Is it worth it?</i> button
@@ -58,6 +64,17 @@
     <p class="last">The website was designed using a mix of HTML, CSS, and javascript. The database was set up using Amazons RDS database using SQL. PHP was used when the user needed to receive information from the database and output it to the website. This was used in every page except for the home page. The home page though has a hidden easter egg inside of it where if you typed in the word <i>"gamer"</i> you would see a hidden menu
       that allows you to use some cool features. You can view the website <a href="http://sample-env.qsqmn93xmz.us-east-1.elasticbeanstalk.com/TCC/home.html">here</a>.</p>
     </div>
+    <script>
+    function openNav() {
+    document.getElementById("menu").style.width = "200px";
+    document.getElementById("menu").style.transition = "0.5s ease";
+    }
+
+    function closeNav() {
+        document.getElementById("menu").style.width = "0";
+        document.getElementById("menu").style.transition = "0.5s ease";
+    }
+    </script>
   </body>
 
 </html>
