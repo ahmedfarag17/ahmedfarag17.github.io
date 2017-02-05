@@ -50,15 +50,10 @@ li a:hover{
   cursor: pointer;
 }
 
-h1{
+.inner{
   font-family: "Futura pt";
   color: white;
   font-size: 5vw;
-  font-style: normal;
-  font-weight: normal;
-}
-
-.inner{
 
   position: fixed;
   top: 45%;
