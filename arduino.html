@@ -57,7 +57,7 @@
           <li><a href="https://www.linkedin.com/in/ahmed-farag-18b715a2">Contact</a></li>
         </ul>
       </div>
-    <div class="lower">
+    <div id="lower" class="lower">
       <img src="images/smartchair.jpg" class="img1" align="left"><h1>Smart Chair</h1>
       <p>The smart chair was design by a group of senior Engineering Majors for their file project. The design was made to help people that have poor posture while sitting down at their desk. They collected a lot of data to figure out the critical angle of the spine as well as the desired height of the elbows.
         With all this data the chair is able to find out if the user is sitting in a good posture or not via pressure sensors and make adjustments to the lumbar and arm supports.</p>
@@ -67,12 +67,17 @@
     <script>
     function openNav() {
     document.getElementById("menu").style.width = "200px";
+    document.getElementById("lower").style.marginLeft = "40%";
     document.getElementById("menu").style.transition = "0.5s ease";
+    document.getElementById("lower").style.transition = "0.5s ease";
+
     }
 
     function closeNav() {
         document.getElementById("menu").style.width = "0";
+        document.getElementById("lower").style.marginLeft = "0%";
         document.getElementById("menu").style.transition = "0.5s ease";
+        document.getElementById("lower").style.transition = "0.5s ease";
     }
     </script>
   </body>

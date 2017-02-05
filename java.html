@@ -57,7 +57,7 @@
           <li><a href="https://www.linkedin.com/in/ahmed-farag-18b715a2">Contact</a></li>
         </ul>
       </div>
-    <div class="lower">
+    <div id="lower" class="lower">
         <img src="images/java1.png" class="img1" align="left"><h1>JAVA(Object Oriented Programming)</h1><p>Java is a mid-level programming language that focuses more on building applications that can run on multiple platforms rather than taking control of the internals of the computer.
         It is in my opinion a great way to first introduce yourself into computer programming and learn about/practice the most commonly used data structures. This is the first language I learned when I chose computer science as my major of study and it made things a lot easier to understand.
         I learned all about the different data structures there are ranging from basic arrays to building complex graphs. Throughout my studies in computer science I have been able to implement all of these data structures in the problems that were thrown my way.</p>
@@ -78,12 +78,17 @@
     <script>
     function openNav() {
     document.getElementById("menu").style.width = "200px";
+    document.getElementById("lower").style.marginLeft = "40%";
     document.getElementById("menu").style.transition = "0.5s ease";
+    document.getElementById("lower").style.transition = "0.5s ease";
+
     }
 
     function closeNav() {
         document.getElementById("menu").style.width = "0";
+        document.getElementById("lower").style.marginLeft = "0%";
         document.getElementById("menu").style.transition = "0.5s ease";
+        document.getElementById("lower").style.transition = "0.5s ease";
     }
     </script>
   </body>

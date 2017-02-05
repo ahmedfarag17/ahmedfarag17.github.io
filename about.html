@@ -57,7 +57,7 @@
         </ul>
       </div>
 
-    <div class="lower">
+    <div id="lower" class="lower">
       <p class="abouts">My name is Ahmed Farag. I recently graduated from Rutgers University and obtained my bachelors in Computer Science with a minor in Psychology.
       I initially started my college career as a Biology Major due to my curiosity of how things worked. Why not learn about how we work as human beings?</p>
     </p><img src="images/bounce.jpg" class="img23"><p class="about">My creative side started to come out as well as I entered college with music. I started to mess around with cool DJ technology and practice the intricacies of mixing music as well as creating it.
@@ -72,12 +72,17 @@
     <script>
     function openNav() {
     document.getElementById("menu").style.width = "200px";
+    document.getElementById("lower").style.marginLeft = "40%";
     document.getElementById("menu").style.transition = "0.5s ease";
+    document.getElementById("lower").style.transition = "0.5s ease";
+
     }
 
     function closeNav() {
         document.getElementById("menu").style.width = "0";
+        document.getElementById("lower").style.marginLeft = "0%";
         document.getElementById("menu").style.transition = "0.5s ease";
+        document.getElementById("lower").style.transition = "0.5s ease";
     }
     </script>
   </body>

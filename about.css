@@ -83,7 +83,27 @@ hr{
 
 @media screen and (max-width: 480px){
   .lower{
-    width: 70vh;
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  body{
+    background-image: none;
+    background-color: white;
+  }
+
+  p.about{
+    font-size: 15px;
+  }
+
+  p.abouts{
+    font-size: 15px;
+  }
+
+  p.lasts{
+    font-size: 15px;
   }
 
   .img23{

@@ -57,7 +57,7 @@
           <li><a href="https://www.linkedin.com/in/ahmed-farag-18b715a2">Contact</a></li>
         </ul>
       </div>
-    <div class="lower">
+    <div id="lower" class="lower">
       <h1><u>The College Chooser</u></h1><img src="images/tcc.png" class="img1" align="center"><p>The College Chooser is a site I designed and built to help students who need to consider their financial situation when choosing a college. It could also be used by students already in college and would like to estimate
       how long it will take them to pay off their loans. To use the website, all you need to do is enter in the college name as well as your major, whether you will move into an apartment after college, and how much percent of your pay check you are willing to put towards paying off those loans. Once you click the <i>Is it worth it?</i> button
     you will be given an answer on how many years, rounded to the nearest year, that it will take for you to pay off those loans based off of the information provided. Another feature of the site is that you can put in the amount of years(max) that you want to take to pay off your loans as well as the other information above except for the college and a list of 50(max) colleges will be shown to you that fit that criteria.</p>
@@ -67,12 +67,17 @@
     <script>
     function openNav() {
     document.getElementById("menu").style.width = "200px";
+    document.getElementById("lower").style.marginLeft = "40%";
     document.getElementById("menu").style.transition = "0.5s ease";
+    document.getElementById("lower").style.transition = "0.5s ease";
+
     }
 
     function closeNav() {
         document.getElementById("menu").style.width = "0";
+        document.getElementById("lower").style.marginLeft = "0%";
         document.getElementById("menu").style.transition = "0.5s ease";
+        document.getElementById("lower").style.transition = "0.5s ease";
     }
     </script>
   </body>

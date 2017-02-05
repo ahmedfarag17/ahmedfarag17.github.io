@@ -57,7 +57,7 @@
           <li><a href="https://www.linkedin.com/in/ahmed-farag-18b715a2">Contact</a></li>
         </ul>
       </div>
-    <div class="lower">
+    <div id="lower" class="lower">
     <h1><u>WORK EXPERIENCE</u><h1>
     <img src="images/atlantic.jpg" align="left" class="img1"><h2>Atlantic Health Systems</h2><p>My position on the Atlantic Health team was an <i>Information Support Specialist</i> which dealt with educating our patients and visitors about the various health technology resources available to them to help lead a healthier lifestyle. Products ranged from Activity Trackers to Wireless blood pressure monitors as well as many apps available to them on the App Store/Google Play Store.</p>
     <p> I also played a role in the development and support of the wayfinding application <i>Take Me There - Overlook</i>. I helped/advised in the testing of the wayfinding application in its pre- release phase and monitored any changes or updates that needed to be made post-release.</p>
@@ -70,12 +70,17 @@
   <script>
   function openNav() {
   document.getElementById("menu").style.width = "200px";
+  document.getElementById("lower").style.marginLeft = "40%";
   document.getElementById("menu").style.transition = "0.5s ease";
+  document.getElementById("lower").style.transition = "0.5s ease";
+
   }
 
   function closeNav() {
       document.getElementById("menu").style.width = "0";
+      document.getElementById("lower").style.marginLeft = "0%";
       document.getElementById("menu").style.transition = "0.5s ease";
+      document.getElementById("lower").style.transition = "0.5s ease";
   }
   </script>
 </html>
