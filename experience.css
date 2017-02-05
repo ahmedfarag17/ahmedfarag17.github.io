@@ -54,5 +54,16 @@ h2{
 
 hr{
   width: 90%;
-  
+
+}
+
+@media screen and (max-width: 480px){
+
+
+  p{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+
 }
