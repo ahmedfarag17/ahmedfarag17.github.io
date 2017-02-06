@@ -32,6 +32,14 @@ h2{
   font-family: "DomaineText",Georgia,serif;
   font-weight: normal;
   font-style: normal;
+  padding-left: 50px;
+  padding-right: 10px;
+}
+
+h5{
+  margin-top:-10px;
+  font-weight:100;
+  font-style: normal;
 }
 
 .wsa{
@@ -58,7 +66,12 @@ hr{
 }
 
 @media screen and (max-width: 480px){
-
+  .small{
+    padding-left: 50px;
+  }
+  .img2{
+    float: none;
+  }
 
   p{
     padding-left: 50px;
