@@ -1,0 +1,335 @@
+<!--DOCTYPE HTML-->
+<html>
+  <head>
+    <title>OMC Atlantic Health Care</title>
+    <link rel="icon" href="images/kioskIcon.png">
+    <style>
+    div{
+          display: block;
+    }
+    .top{
+      position: fixed;
+      width: 100%;
+
+      z-index: 12;
+    }
+
+    .topImg{
+      margin-top: -10px;
+
+      width: 100%;
+
+    }
+
+    button{
+      position: relative;
+    font-family: 'Optima-Regular',sans-serif;
+    width: 420px;
+    height: 85px;
+    line-height: 85px;
+    font-size: 36px;
+    outline: 0;
+    border: none;
+    background: #365e97;
+    color: #FFFFFF;
+    cursor: pointer;
+    }
+
+    .two{
+          padding: 20px 70px 20px 70px;
+          width: 570px;
+          height: 532px;
+    }
+
+    p{
+      color: #00337f;
+font-family: 'Optima-Regular',sans-serif;
+font-size: 36px;
+text-align: center;
+    }
+
+    .text2{
+      margin-top: -50px;
+      padding-right: 70px;
+    }
+
+    .text{
+
+      padding-right: 125px;
+    }
+
+    .point{
+      height:50px;
+      width: 50px;
+      margin-top: 35px;
+      padding-left: 40px;
+    }
+
+    .buttons{
+      padding: 20px 70px 20px 0px;
+      width: 570px;
+      height: 573px;
+      border-top: solid #e6e6e6;
+      border-width: 1px;
+      background-color: white;
+      z-index: 13;
+    }
+
+    .buttons2{
+      width: 580px;
+      height: 573px;
+      border-top: solid #e6e6e6;
+      border-width: 1px;
+      margin-bottom:-999px;
+      background-color: white;
+      z-index: 14;
+      opacity: 0.99;
+      overflow-y: scroll;
+    }
+
+    .buttons2 ul{
+      background-color: white;
+    }
+
+    .buttons2 li{
+      display: inline-block;
+      width: 100%;
+      border-bottom: none;
+    }
+
+  ul {
+    width: 570px;
+    list-style: none;
+    display: block;
+    overflow: hidden;
+  }
+
+
+  li {
+    display: inline;
+      width: 50%;
+      height: 50px;
+      color: #000000;
+      font-family: 'Optima-Regular',sans-serif;
+      font-size: 18px;
+      border-bottom: 1px solid #e6e6e6;
+      float: left;
+      padding-top: 30px;
+      cursor: pointer;
+      cursor: finger;
+
+  }
+
+  .left1{
+      padding: 0;
+  }
+
+
+  .map{
+    position: fixed;
+    left: 600px;
+    top:100px;
+    width: 75%;
+    height: 90%;
+  }
+
+  input{
+    font-family: 'Optima-Regular',sans-serif;
+    font-size: 32px;
+    color: #000000;
+    height: 60px;
+    margin-top: 10px;
+    padding-right: 190px;
+  }
+
+  .closebtn{
+    display: block;
+    float: left;
+    color: #818181;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 40px;
+
+    padding-right: 10px;
+  }
+
+  .closebtn:hover{
+    cursor: pointer;
+  }
+
+  .location{
+    display: none;
+    position: fixed;
+    z-index: 1051;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    background: #999999;
+    background: rgba(0,0,0,0.35);
+  }
+
+  .box{
+    position: relative;
+    left: 30%;
+    margin-top: 999px;
+    background: white;
+    max-width: 580px;
+    padding: 30px;
+    -webkit-box-shadow: 0 1px 3px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 1px 3px 2px rgba(0,0,0,0.3);
+    box-shadow: 0 1px 3px 2px rgba(0,0,0,0.3);
+    text-align: center;
+  }
+
+  .closebtn2{
+    display: block;
+    float: left;
+    color: #818181;
+    text-decoration: none;
+    margin-top: -15px;
+    font-size: 40px;
+
+    padding-right: 10px;
+  }
+
+  h1{
+    font-family: 'Optima-Bold',sans-serif;
+font-weight: bold;
+color: #00337f;
+font-size: 34px;
+  }
+
+  h2{
+    font-family: 'Optima-Bold',sans-serif;
+font-weight: bold;
+color: #caccce;
+  }
+
+  body, html {height:100%;}
+    </style>
+
+    <script>
+    function functionShow(){
+
+        document.getElementById("buttons2").style.marginBottom = "0px";
+        document.getElementById("buttons2").style.transition = "0.5s ease";
+
+      document.getElementById("buttons2").style.marginTop = "-615px";
+      document.getElementById("buttons2").style.transition = "0.5s ease";
+
+    }
+
+    function closeNav(){
+
+        document.getElementById("buttons2").style.marginTop = "0px";
+        document.getElementById("buttons2").style.transition = "0.5s ease";
+
+        document.getElementById("buttons2").style.marginBottom = "-999px";
+        document.getElementById("buttons2").style.transition = "0.5s ease";
+    }
+
+    function showInfo(){
+        document.getElementById("location").style.display = 'block';
+        setTimeout(function() {
+          document.getElementById("box").style.marginTop = "350px";
+          document.getElementById("box").style.transition = "0.5s ease";
+        }, 0);
+
+    }
+
+    function closeInfo(){
+        document.getElementById("box").style.marginTop = "80%";
+        document.getElementById("box").style.transition = "0.5s ease";
+        setTimeout(function(){
+        document.getElementById("location").style.display = 'none';
+      },500);
+    }
+    </script>
+  </head>
+  <body>
+    <div class="top">
+      <img class="topImg" src="images/TMTmenu.png">
+    </div>
+
+    <div style="float: left; margin-top: 90px; z-index: 10;">
+        <div id="two" class="two">
+          <p class="text">Where do you want to go?</p>
+          <button class="direction" type="button">Get Directions</button>
+          <p class="text"> or </p>
+          <button class="direction" type="button">Search the Directory</button><br/>
+          <img class="point" src="images/point.png"><p class="text2">Explore the Map</p>
+        </div>
+        <div class="buttons">
+          <ul class="poi-list indoor">
+    			<li class="left1" onclick="functionShow()" data-cat-id="1000">
+    				<span class="icon icon-align-left staff"></span><span class="text2">Physicians</span>
+    			</li>
+    			<li class="left1" data-cat-id="7">
+    				<span class="icon icon-align-left parking"></span><span class="text2">Parking</span>
+    			</li>
+    			<li class="left" data-cat-id="1">
+    				<span class="icon icon-align-left departments"></span><span class="text2">Departments</span>
+    			</li>
+    			<li class="right" data-cat-id="10">
+    				<span class="icon icon-align-left atm"></span><span class="text2">Banks / ATMs</span>
+    			</li>
+    			<li class="left" data-cat-id="9">
+    				<span class="icon icon-align-left restrooms"></span><span class="text2">Restrooms</span>
+    			</li>
+    			<li class="right" data-cat-id="15">
+    				<span class="icon icon-align-left elevators"></span><span class="text2">Elevators</span>
+    			</li>
+    			<li class="left" data-cat-id="16">
+    				<span class="icon icon-align-left dining"></span><span class="text2">Dining</span>
+    			</li>
+    			<li class="right two-lines" data-cat-id="4">
+    				<span class="icon icon-align-left entrance"></span><span class="text2">Entrances and Exits</span>
+    			</li>
+    			<li class="left" data-cat-id="11">
+    				<span class="icon icon-align-left shopping"></span><span class="text2">Shopping</span>
+    			</li>
+    			<li class="right" data-cat-id="22">
+    				<span class="icon icon-align-left stairs"></span><span class="text2">Stairs</span>
+    			</li>
+    			<li class="left" data-cat-id="95">
+    				<span class="icon icon-align-left mac-suites"></span><span class="text">Mac Suites</span>
+    			</li>
+    			<li class="right empty">&nbsp;</li>
+    		</ul>
+        </div>
+        <div id="buttons2" class="buttons2">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <input type="text" class="form-control" placeholder="Search" data-target="search-query" id="search-query">
+          <ul>
+            <li data-id="2043" data-data-type="indoor" data-cat-id="1000">Aasmaa, Sirike</li>
+            <li data-id="1905" data-data-type="indoor" data-cat-id="1000">Abbasi, Rashid</li>
+            <li data-id="1918" data-data-type="indoor" data-cat-id="1000">Abbate, Marc</li>
+            <li data-id="2186" data-data-type="indoor" data-cat-id="1000">Abdo-Matkiwsky, May</li>
+            <li data-id="2552" data-data-type="indoor" data-cat-id="1000">Abed, Mary</li>
+            <li data-id="1539" data-data-type="indoor" data-cat-id="1000">Abel, Carter</li>
+            <li data-id="2" data-data-type="indoor" data-cat-id="1000">Abel, Richard</li>
+            <li data-id="3" onclick="showInfo()" data-data-type="indoor" data-cat-id="1000">Abeshaus, Lisa</li>
+            <li data-id="3866" data-data-type="indoor" data-cat-id="1000">Abir, Farshad</li>
+            <li data-id="1751" data-data-type="indoor" data-cat-id="1000">Abkin, Alexander</li>
+          </ul>
+        </div>
+    </div>
+
+    <div >
+      <img class="map" src="images/map.png" />
+    </div>
+
+    <div id="location" class="location">
+      <div id="box" class="box">
+        <a href="javascript:void(0)" class="closebtn2" onclick="closeInfo()">&times;</a>
+        <h1 style="text-align: center;">Lisa Abeshaus, MD</h1>
+        <h2>OB / GYN</h2>
+        <h3>Suite 108 Floor 1, Medical Arts Center I</h3>
+        <h4>Phone: (908) 522-4558</h4>
+        <button class="direction" type="button">Get Directions</button>
+      </div>
+    </div>
+  </body>
+</html>
