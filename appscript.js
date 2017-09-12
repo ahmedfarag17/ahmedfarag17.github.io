@@ -12,6 +12,7 @@ var inside = "<input type=\"image\" id=\"bp\" src=\"images/bp.jpg\" onclick=\"fi
 function fillIn(identifier){
   document.getElementById("back").style.visibility = "visible";
   document.getElementById("apps").style.backgroundColor = "white";
+  document.getElementById("apps").style.boxShadow = "1px 1px 10px #888888";
   switch (identifier) {
     case "bp": document.getElementById("apps").innerHTML = bloodPressure; return;
     case "diabetes": document.getElementById("apps").innerHTML = diabetes;return;
@@ -25,6 +26,7 @@ function fillIn(identifier){
 
 function goBack(){
   document.getElementById("apps").style.backgroundColor = null;
+  document.getElementById("apps").style.boxShadow = null;
   document.getElementById("back").style.visibility = "hidden";
   document.getElementById("apps").innerHTML = inside;
 }
