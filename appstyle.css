@@ -10,6 +10,9 @@ html, body {
   background-color: #F8991B;
 }
 
+h2{
+  padding-top: 10px;
+}
       .ah{
         float: left;
         margin-left: 5%;
