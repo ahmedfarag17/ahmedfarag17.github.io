@@ -16,6 +16,7 @@ h2{
       .ah{
         float: left;
         margin-left: 5%;
+        margin-top: 25px;
         -webkit-animation: bounceInDown 1.5s; /* Safari, Chrome and Opera > 12.1 */
                -moz-animation: bounceInDown 1.5s; /* Firefox < 16 */
                 -ms-animation: bounceInDown 1.5s; /* Internet Explorer */
