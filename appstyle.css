@@ -1,0 +1,227 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+.menu{
+  width: 100%;
+  height: 100px;
+  display: block;
+  background-color: #E64D3D;
+}
+
+      .ah{
+        float: left;
+        margin-left: 5%;
+        -webkit-animation: bounceInDown 1.5s; /* Safari, Chrome and Opera > 12.1 */
+               -moz-animation: bounceInDown 1.5s; /* Firefox < 16 */
+                -ms-animation: bounceInDown 1.5s; /* Internet Explorer */
+                 -o-animation: bounceInDown 1.5s; /* Opera < 12.1 */
+                    animation: bounceInDown 1.5s;
+      }
+
+      .logo{
+        margin-left: 20%;
+        -webkit-animation: bounceInDown 1s; /* Safari, Chrome and Opera > 12.1 */
+               -moz-animation: bounceInDown 1s; /* Firefox < 16 */
+                -ms-animation: bounceInDown 1s; /* Internet Explorer */
+                 -o-animation: bounceInDown 1s; /* Opera < 12.1 */
+                    animation: bounceInDown 1s;
+      }
+      .download{
+        float: right;
+        margin-top: 25px;
+        margin-right: 5%;
+        background-color: #E64D3D; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        -webkit-animation: bounceInDown 1.5s; /* Safari, Chrome and Opera > 12.1 */
+               -moz-animation: bounceInDown 1.5s; /* Firefox < 16 */
+                -ms-animation: bounceInDown 1.5s; /* Internet Explorer */
+                 -o-animation: bounceInDown 1.5s; /* Opera < 12.1 */
+                    animation: bounceInDown 1.5s;
+      }
+.download:hover{
+  cursor: pointer;
+  background-color: #f44336; /* Green */
+}
+.apps{
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 75%;
+  border-radius: 5px;
+  height: auto;
+}
+
+.innerApps{
+  width: 100%;
+  background-color: white;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 10px #888888;
+}
+
+.first{
+  -webkit-animation: fadeInUp 1s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadeInUp 1s; /* Firefox < 16 */
+          -ms-animation: fadeInUp 1s; /* Internet Explorer */
+           -o-animation: fadeInUp 1s; /* Opera < 12.1 */
+              animation: fadeInUp 1s;
+}
+
+.second{
+  -webkit-animation: fadeInUp 1.3s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadeInUp 1.3s; /* Firefox < 16 */
+          -ms-animation: fadeInUp 1.3s; /* Internet Explorer */
+           -o-animation: fadeInUp 1.3s; /* Opera < 12.1 */
+              animation: fadeInUp 1.3s;
+}
+
+.third{
+  -webkit-animation: fadeInUp 1.6s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadeInUp 1.6s; /* Firefox < 16 */
+          -ms-animation: fadeInUp 1.6s; /* Internet Explorer */
+           -o-animation: fadeInUp 1.6s; /* Opera < 12.1 */
+              animation: fadeInUp 1.6s;
+}
+
+.fourth{
+  -webkit-animation: fadeInUp 1.9s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadeInUp 1.9s; /* Firefox < 16 */
+          -ms-animation: fadeInUp 1.9s; /* Internet Explorer */
+           -o-animation: fadeInUp 1.9s; /* Opera < 12.1 */
+              animation: fadeInUp 1.9s;
+}
+
+.fifth{
+  -webkit-animation: fadeInUp 2.2s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadeInUp 2.2s; /* Firefox < 16 */
+          -ms-animation: fadeInUp 2.2s; /* Internet Explorer */
+           -o-animation: fadeInUp 2.2s; /* Opera < 12.1 */
+              animation: fadeInUp 2.2s;
+}
+
+.sixth{
+  -webkit-animation: fadeInUp 2.5s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadeInUp 2.5s; /* Firefox < 16 */
+          -ms-animation: fadeInUp 2.5s; /* Internet Explorer */
+           -o-animation: fadeInUp 2.5s; /* Opera < 12.1 */
+              animation: fadeInUp 2.5s;
+}
+
+.seventh{
+  -webkit-animation: fadeInUp 2.8s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadeInUp 2.8s; /* Firefox < 16 */
+          -ms-animation: fadeInUp 2.8s; /* Internet Explorer */
+           -o-animation: fadeInUp 2.8s; /* Opera < 12.1 */
+              animation: fadeInUp 2.8s;
+}
+
+.eighth{
+  -webkit-animation: fadeInUp 3.1s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadeInUp 3.1s; /* Firefox < 16 */
+          -ms-animation: fadeInUp 3.1s; /* Internet Explorer */
+           -o-animation: fadeInUp 3.1s; /* Opera < 12.1 */
+              animation: fadeInUp 3.1s;
+}
+
+.images{
+  float: left;
+  height: 175px;
+  width: 175px;
+  padding-top: 40px;
+  padding-left: 70px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+p, ul, li{
+    padding-top: 40px;
+    padding-right: 70px;
+    padding-left: 70px;
+    color: #443235;
+    font-family: "DomaineText",Georgia,serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.5;
+}
+hr{
+  width:90%;
+}
+.buttons:hover{
+  cursor: pointer;
+}
+.buttons{
+  display: inline-block;
+  width: 20%;
+  height: 20%;
+  margin-left: 20%;
+  margin-bottom: 10%;
+}
+.back{
+  margin-top: 60px;
+  margin-left: 10%;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.bottom{
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+.bottom p{
+  margin-left: 35%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes bounceInDown {
+       from, 60%, 75%, 90%, to {
+         animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+       }
+       0% {
+         opacity: 0;
+         transform: translate3d(0, -3000px, 0);
+       }
+       60% {
+         opacity: 1;
+         transform: translate3d(0, 25px, 0);
+       }
+       75% {
+         transform: translate3d(0, -10px, 0);
+       }
+       90% {
+         transform: translate3d(0, 5px, 0);
+       }
+       to {
+         transform: none;
+       }
+     }
+     .bounceInDown {
+       animation-name: bounceInDown;
+     }
