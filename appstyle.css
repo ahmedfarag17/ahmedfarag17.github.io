@@ -32,7 +32,7 @@ html, body {
         float: right;
         margin-top: 25px;
         margin-right: 5%;
-        background-color: #E64D3D; /* Green */
+        background-color: #FBB55F; /* Green */
         border: none;
         color: white;
         padding: 15px 32px;
@@ -48,7 +48,7 @@ html, body {
       }
 .download:hover{
   cursor: pointer;
-  background-color: #f44336; /* Green */
+  background-color: #F8991B; /* Orange */
 }
 .apps{
   margin: 0 auto;
