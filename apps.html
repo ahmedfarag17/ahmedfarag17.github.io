@@ -14,8 +14,24 @@
         display: block;
         background-color: #E64D3D;
       }
+      
+      .ah{
+        float: left; 
+        margin-left: 5%;
+        -webkit-animation: bounceInDown 1.5s; /* Safari, Chrome and Opera > 12.1 */
+               -moz-animation: bounceInDown 1.5s; /* Firefox < 16 */
+                -ms-animation: bounceInDown 1.5s; /* Internet Explorer */
+                 -o-animation: bounceInDown 1.5s; /* Opera < 12.1 */
+                    animation: bounceInDown 1.5s;
+      }
+      
       .logo{
         margin-left: 20%;
+        -webkit-animation: bounceInDown 1s; /* Safari, Chrome and Opera > 12.1 */
+               -moz-animation: bounceInDown 1s; /* Firefox < 16 */
+                -ms-animation: bounceInDown 1s; /* Internet Explorer */
+                 -o-animation: bounceInDown 1s; /* Opera < 12.1 */
+                    animation: bounceInDown 1s;
       }
       .download{
         float: right;
@@ -29,6 +45,11 @@
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
+        -webkit-animation: bounceInDown 1.5s; /* Safari, Chrome and Opera > 12.1 */
+               -moz-animation: bounceInDown 1.5s; /* Firefox < 16 */
+                -ms-animation: bounceInDown 1.5s; /* Internet Explorer */
+                 -o-animation: bounceInDown 1.5s; /* Opera < 12.1 */
+                    animation: bounceInDown 1.5s;
       }
       .download:hover{
         cursor: pointer;
@@ -143,13 +164,45 @@
       .fadeIn {
         animation-name: fadeIn;
       }
+      
+      @keyframes bounceInDown {
+        from, 60%, 75%, 90%, to {
+          animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        }
+
+        0% {
+          opacity: 0;
+          transform: translate3d(0, -3000px, 0);
+        }
+
+        60% {
+          opacity: 1;
+          transform: translate3d(0, 25px, 0);
+        }
+
+        75% {
+          transform: translate3d(0, -10px, 0);
+        }
+
+        90% {
+          transform: translate3d(0, 5px, 0);
+        }
+
+        to {
+          transform: none;
+        }
+      }
+
+      .bounceInDown {
+        animation-name: bounceInDown;
+      }
     </style>
 
     <script type="text/javascript" src="appscript.js"></script>
   </head>
   <body>
     <div class="menu">
-      <img src="images/logo_atlantichealth.png" style="float: left; margin-left: 5%;">
+      <img src="images/logo_atlantichealth.png" class="ah">
       <form method="get" action="Health-Apps.xls">
         <button class="download">Download Excel!</button>
       </form>
