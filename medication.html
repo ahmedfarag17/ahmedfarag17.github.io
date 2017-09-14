@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: white;
+      }
+      .menu{
+        width: 100%;
+        height: 100px;
+        display: block;
+        background-color: #E64D3D;
+      }
+      .logo{
+        margin-left: 20%;
+      }
+      .download{
+        float: right;
+        margin-top: 25px;
+        margin-right: 5%;
+        background-color: #E64D3D; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+      .download:hover{
+        cursor: pointer;
+        background-color: #f44336; /* Green */
+      }
+      .apps{
+        margin: 0 auto;
+        margin-top: 50px;
+        width: 75%;
+        border-radius: 5px;
+        height: auto;
+      }
+
+      .innerApps{
+        width: 100%;
+        background-color: white;
+        margin-bottom: 40px;
+        box-shadow: 1px 1px 10px #888888;
+      }
+
+      .first{
+        -webkit-animation: fadeInUp 1s;
+      }
+
+      .second{
+        -webkit-animation: fadeInUp 1.3s;
+      }
+
+      .third{
+        -webkit-animation: fadeInUp 1.6s;
+      }
+
+      .fourth{
+        -webkit-animation: fadeInUp 1.9s;
+      }
+
+      .fifth{
+        -webkit-animation: fadeInUp 2.2s;
+      }
+
+      .sixth{
+        -webkit-animation: fadeInUp 2.5s;
+      }
+
+      .images{
+        float: left;
+        height: 175px;
+        width: 175px;
+        padding-top: 40px;
+        padding-left: 70px;
+        padding-right: 40px;
+        padding-bottom: 40px;
+      }
+      p, ul, li{
+          padding-top: 40px;
+          padding-right: 70px;
+          padding-left: 70px;
+          color: #443235;
+          font-family: "DomaineText",Georgia,serif;
+          font-weight: normal;
+          font-style: normal;
+          line-height: 1.5;
+      }
+      hr{
+        width:90%;
+      }
+      .buttons:hover{
+        cursor: pointer;
+      }
+      .buttons{
+        display: inline-block;
+        width: 20%;
+        height: 20%;
+        margin-left: 20%;
+        margin-bottom: 10%;
+      }
+      .back{
+        margin-top: 60px;
+        margin-left: 10%;
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .bottom{
+        margin-top: 50px;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+      }
+      .bottom p{
+        margin-left: 35%;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translate3d(0, 100%, 0);
+        }
+
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      .fadeInUp {
+        animation-name: fadeInUp;
+      }
+    </style>
+
+    <script type="text/javascript" src="appscript.js"></script>
+  </head>
+  <body>
+    <div class="menu">
+      <img src="images/logo_atlantichealth.png" style="float: left; margin-left: 5%;">
+      <form method="get" action="Health-Apps.xls">
+        <button class="download">Download Excel!</button>
+      </form>
+      <img src="images/Logo.png" class="logo">
+    </div>
+
+    <button type="button" class="back" id="back" name="back" onclick="apps.html">Back</button>
+
+    <div class="apps" id="apps">
+
+    <div class="innerApps first">
+      <img src=images/mymeds.jpg class=images>   <h2> My Medications </h2><p> Type of App: Medication <br><br> Platforms: iOS  <br><br> Rating : <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span><span>&#9734;</span> <br><br> Price : $0.99 <br><br><br> Description : Research-based. AMA-developed. Patient-directed. Whether you’re keeping track of multiple medications, recording allergy information or storing emergency contacts, the My Medications app from the American Medical Association is your solution. Developed specifically for patients by health care professionals, My Medications lets you store, carry and share your critical medical information in one secure place that you can take with you. With My Medications, you can share up-to-date medical information with your primary care physician, specialists, pharmacist, or family members and friends quickly and easily. <br><br> <a href=https://itunes.apple.com/us/app/my-medications/id478343764?mt=8>iTunes Link</a> <br><br>
+    </div>
+    <div class="innerApps second">
+      <img src=images/medschedule.png class=images>   <h2> MyMedSchedule </h2><p> Type of App: Medication <br><br> Platforms: iOS &amp; Android <br><br> Rating : <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span> <br><br> Price : Free <br><br><br> Description : MyMedSchedule allows you to create and save easy-to-understand medication schedules. Each MyMedSchedule shows what times you should take your medications or supplements, how much to take, and the purpose.  <br><br> <a href=https://play.google.com/store/apps/details?id=com.mmsmobile&hl=en>Android Link</a> <br><br>
+    </div>
+    <div class="innerApps third">
+      <img src=images/medcoach.jpg class=images>   <h2> MedCoach Medication Reminder </h2><p> Type of App: Medication <br><br> Platforms: iOS &amp; Android <br><br> Rating : <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span> <br><br> Price : Free <br><br><br> Description : MedCoach is an easy-to-use medical app that helps you remember to take your medications and pills at the right time and day. Never forget to take your meds! MedCoach can also connect to your pharmacy to refill your prescriptions. MedCoach is medication management and a medication reminder made easy! <br><br> <a href=https://itunes.apple.com/us/app/medcoach-medication-reminder/id443065594?mt=8>iTunes Link</a> <br><br>
+    </div>
+    <div class="innerApps fourth">
+      <img src=images/bewell.jpg class=images>   <h2> Be Well </h2><p> Type of App: Diabetes/Medication/Weight Loss <br><br> Platforms: iOS &amp; Android <br><br> Rating : Not Yet Rated <br><br> Price : Free <br><br><br> Description :- Learn about common health conditions and treatment options - We now have a new area just For Visitors to help you navigate your stay while at the hospital. - View a list of health care providers in your area or search by specialty - Access physician bios with contact info, maps, and directions to office locations - Get easy directions and map to Morristown Medical Center - Track common health indicators including cholesterol, weight, blood pressure, blood glucose, headaches, pregnancy and more - Connect with over 100 different activity devices and apps including Health app, Runkeeper, fitbit, Nike + and many more. - Keep a list of your medications and dosing schedule - Access easy to read articles and videos about health topics including diseases, procedures and health tips ...don’t forget, you can easily share all this data with your doctors, family and friends. <br><br> <a href=https://itunes.apple.com/us/app/be-well-morristown-medical-center/id798745007?mt=8>iTunes Link</a> <br><br>
+    </div>
+    <div class="innerApps fifth">
+      <img src=images/Medisafe Pill Reminder &amp; Medication Tracker .jpg class=images>      <h2> Medisafe Pill Reminder &amp; Medication Tracker </h2><p> Type of App: Medication Tracker <br><br> Platforms: iOS &amp; Android <br><br> Rating : <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>  <br><br> Price : Free<br><br><br> Description : Never forget to take your meds, vitamins and pills again with the MUST HAVE pill reminder ranked #1 by pharmacists. <br><br> <a href=https://itunes.apple.com/us/app/medisafe-pill-reminder-medication-tracker/id573916946?mt=8>iTunes Link</a> </p><br><br>
+    </div>
+    <div class="innerApps sixth">
+      <img src=images/mango health app.jpeg class=images> <h2> Mango Health </h2><p> Type of App: Medication Tracker <br><br> Platforms: iOS &amp; Android <br><br> Rating : <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>  <br><br> Price : Free<br><br><br> Description : Mango Health helps you manage your medicine and create healthy habits, so you can savor the moments that matter most. <br><br> <a href=https://www.mangohealth.com/>Website Link</a> </p> <br><br>
+    </div>
+
+    </div>
+    <div class="bottom">
+      <p>Created By : Ahmed Farag <br><br> Researched By: Ahmed Farag &amp; Joanne Gould <br><br> <a href="https://ahmedfarag17.github.io/">Go To Home Page</a></p>
+    </div>
+  </body>
+</html>

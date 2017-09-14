@@ -16,8 +16,6 @@
       }
       .logo{
         margin-left: 20%;
-
-
       }
       .download{
         float: right;
@@ -32,13 +30,10 @@
         display: inline-block;
         font-size: 16px;
       }
-
       .download:hover{
         cursor: pointer;
         background-color: #f44336; /* Green */
-
       }
-
       .apps{
         margin: 0 auto;
         margin-top: 50px;
@@ -46,7 +41,6 @@
         border-radius: 5px;
         height: auto;
       }
-
       .images{
         float: left;
         height: 175px;
@@ -56,7 +50,6 @@
         padding-right: 40px;
         padding-bottom: 40px;
       }
-
       p, ul, li{
           padding-top: 40px;
           padding-right: 70px;
@@ -67,21 +60,34 @@
           font-style: normal;
           line-height: 1.5;
       }
-
       hr{
         width:90%;
       }
-
       .buttons:hover{
         cursor: pointer;
       }
-
       .buttons{
         display: inline-block;
         width: 20%;
         height: 20%;
         margin-left: 20%;
         margin-bottom: 10%;
+      }
+
+      .first{
+        -webkit-animation: fadeIn 1s;
+      }
+
+      .second{
+        -webkit-animation: fadeIn 1.3s;
+      }
+
+      .third{
+        -webkit-animation: fadeIn 1.6s;
+      }
+
+      .fourth{
+        -webkit-animation: fadeIn 1.9s;
       }
 
       .back{
@@ -98,17 +104,28 @@
     font-size: 16px;
     cursor: pointer;
       }
-
       .bottom{
         margin-top: 50px;
-
         width: 100%;
         height: 100%;
         background-color: black;
       }
-
       .bottom p{
         margin-left: 35%;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      .fadeIn {
+        animation-name: fadeIn;
       }
     </style>
 
@@ -127,10 +144,10 @@
 
     <div class="apps" id="apps">
 
-          <input type="image" id="bp" src="images/bp.jpg" onclick="fillIn(id)" class="buttons">
-          <input type="image" id="diabetes" src="images/diabetes.jpg" onclick="fillIn(id)" class="buttons">
-          <input type="image" id="med" src="images/pill.PNG" onclick="fillIn(id)" class="buttons">
-          <input type="image" id="weight" src="images/weight.jpg" onclick="fillIn(id)" class="buttons">
+          <input type="image" id="bp" src="images/bp.jpg" onclick="fillIn(id)" class="buttons first">
+          <input type="image" id="diabetes" src="images/diabetes.jpg" onclick="fillIn(id)" class="buttons second">
+          <input type="image" id="med" src="images/pill.PNG" onclick="fillIn(id)" class="buttons third">
+          <input type="image" id="weight" src="images/weight.jpg" onclick="fillIn(id)" class="buttons fourth">
 
     </div>
     <div class="bottom">
