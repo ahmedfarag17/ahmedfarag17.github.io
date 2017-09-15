@@ -91,6 +91,7 @@ function handleFiles(file){
         var newElem = document.createElement('img');
         newElem.setAttribute('class', 'img1');
         newElem.setAttribute('src', 'cmc.jpg');
+        newElem.setAttribute('id', 'bypassme');
         divElem.appendChild(newElem);
 
         newElem = document.createElement('h2');
