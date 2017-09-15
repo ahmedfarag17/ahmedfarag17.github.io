@@ -78,7 +78,7 @@ function handleFiles(file){
 
     function buildHTML(depts){
 
-
+      var track = 1;
       for(key in depts){
 
         var questions = getArray();
@@ -86,6 +86,7 @@ function handleFiles(file){
 
         var divElem = document.createElement('div');
         divElem.setAttribute('class', 'bod');
+        divElem.setAttribute('id', track);
 
         var newElem = document.createElement('img');
         newElem.setAttribute('class', 'img1');
@@ -188,9 +189,36 @@ function handleFiles(file){
           }
         }
         document.body.appendChild(divElem);
+        newElem = document.createElement('button');
+        var str = "exporter('#" + track + "', '"+ key+ " " + depts[key][1] + "')";
+        track+=2;
+        newElem.setAttribute('onclick', str);
+        newElem.setAttribute('src', 'cmc.jpg');
+        newElem.innerHTML = "Export PDF";
+        document.body.appendChild(newElem);
 
       }
     }
+
+    function exporter(name, key){
+      var pdf = jsPDF('p', 'pt', 'letter');
+      var soure = $(name)[0];
+      var specialElementHandlers = {
+        '#bypassme': function(element, renderer){
+          return true;
+        }
+      }
+
+      margins = {
+        top: 10, left: 10, width: 1000
+      };
+
+      pdf.fromHTML(soure, margins.left, margins.top, {'width': margins.width, 'elementHandlers' : specialElementHandlers}, function (dispose) {
+        pdf.save(key +".pdf");
+      })
+
+    }
+
 
     function errorHandler(evt) {
       if(evt.target.error.name == "NotReadableError") {
