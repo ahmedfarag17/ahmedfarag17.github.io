@@ -210,7 +210,7 @@ function handleFiles(file){
       }
 
       margins = {
-        top: 10, left: 10, width: 1000
+        top: 10, left: 10, width: 1500
       };
 
       pdf.fromHTML(soure, margins.left, margins.top, {'width': margins.width, 'elementHandlers' : specialElementHandlers}, function (dispose) {
