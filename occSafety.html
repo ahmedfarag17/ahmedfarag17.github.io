@@ -61,16 +61,24 @@
       }
       
       .inputfile, label {
-          font-size: 1.25em;
+          max-width: 80%;
+          font-size: 1.25rem;
           font-weight: 700;
-          color: white;
-          background-color: black;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          cursor: pointer;
           display: inline-block;
+          overflow: hidden;
+          padding: 0.625rem 1.25rem;
+          color: #f1e5e6;
+          background-color: #d3394c;
+          display: inline-block;
+        
       }
 
       .inputfile:focus, label,
       .inputfile, label:hover {
-          background-color: red;
+          background-color: #d3394c;
       }
       
       .question, i{
