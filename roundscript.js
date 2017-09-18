@@ -202,6 +202,8 @@ function handleFiles(file){
     }
 
     function exporter(name, key){
+      window.print();      
+      return;
       var pdf = jsPDF('p', 'pt', 'letter');
       var soure = $(name)[0];
       var specialElementHandlers = {
