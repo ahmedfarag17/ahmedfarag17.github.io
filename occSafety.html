@@ -52,13 +52,25 @@
       }
       
       input{
-        font-size: 1.25em;
-        font-weight: 700;
-        color: white;
-        background-color: black;
-        display: inline-block;
-        background-color: red;
-        cursor: pointer;
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+      }
+      
+      .inputfile + label {
+          font-size: 1.25em;
+          font-weight: 700;
+          color: white;
+          background-color: black;
+          display: inline-block;
+      }
+
+      .inputfile:focus + label,
+      .inputfile + label:hover {
+          background-color: red;
       }
       
       .question, i{
@@ -76,7 +88,10 @@
     <link href='https://fonts.googleapis.com/css?family=GFS Didot' rel='stylesheet'>
   </head>
   <body>
-    <input type="file" id="csvFileInput" onchange="handleFiles(this.files)"  >
+    <label class="fileContainer">
+        Choose a file
+        <input type="file" class="inputfile" id="csvFileInput" onchange="handleFiles(this.files)"  >
+    </label>
     <!-- <div class="bod" id="bod">
       <img src="cmc.jpg" class="img1">
       <h2><center>Occupational Safety <br/>- EOC Checklist</center></h2>
