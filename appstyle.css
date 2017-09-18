@@ -220,6 +220,48 @@ hr{
   margin-left: 35%;
 }
 
+.left{
+        background-color: #F8991B;
+        float: left;
+        z-index: 1;
+        width: 60%;
+        height: 100%;
+        position: absolute;
+        -webkit-animation: fadeOutLeft 2s forwards; /* Safari, Chrome and Opera > 12.1 */
+               -moz-animation: fadeOutLeft 2s forwards; /* Firefox < 16 */
+                -ms-animation: fadeOutLeft 2s forwards; /* Internet Explorer */
+                 -o-animation: fadeOutLeft 2s forwards; /* Opera < 12.1 */
+                    animation: fadeOutLeft 2s forwards;
+      }
+
+      .logoImg{
+        z-index: 3;
+        float: right;
+        margin-top: 30%;
+        margin-left: 40%;
+        position: absolute;
+        -webkit-animation: fadeOutLeftImg 2s forwards; /* Safari, Chrome and Opera > 12.1 */
+               -moz-animation: fadeOutLeftImg 2s forwards; /* Firefox < 16 */
+                -ms-animation: fadeOutLeftImg 2s forwards; /* Internet Explorer */
+                 -o-animation: fadeOutLeftImg 2s forwards; /* Opera < 12.1 */
+                    animation: fadeOutLeftImg 2s forwards;
+      }
+
+      .right{
+        z-index: 2;
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        background-color: #F8991B;
+        margin-left: 50%;
+        -webkit-animation: fadeOutRight 2s forwards; /* Safari, Chrome and Opera > 12.1 */
+               -moz-animation: fadeOutRight 2s forwards; /* Firefox < 16 */
+                -ms-animation: fadeOutRight 2s forwards; /* Internet Explorer */
+                 -o-animation: fadeOutRight 2s forwards; /* Opera < 12.1 */
+                    animation: fadeOutRight 2s forwards;
+      }
+
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -275,3 +317,50 @@ hr{
      .bounceInDown {
        animation-name: bounceInDown;
      }
+
+@keyframes fadeOutLeft {
+        from {
+          opacity: 1;
+        }
+
+        to {
+          opacity: 0;
+          transform: translate3d(-100%, 0, 0);
+        }
+      }
+
+      .fadeOutLeft {
+        animation-name: fadeOutLeft;
+      }
+
+      @keyframes fadeOutLeftImg {
+        from {
+          opacity: 1;
+        }
+
+        to {
+          opacity: 0;
+          transform: translate3d(-250%, 0, 0);
+        }
+      }
+
+      .fadeOutLeft {
+        animation-name: fadeOutLeft;
+      }
+
+      @keyframes fadeOutRight {
+        from {
+          opacity: 1;
+        }
+
+        to {
+          opacity: 0;
+          transform: translate3d(100%, 0, 0);
+        }
+      }
+
+      .fadeOutRight {
+        animation-name: fadeOutRight;
+      }
+
+      
