@@ -79,8 +79,12 @@ function handleFiles(file){
     function buildHTML(depts){
 
       var track = 1;
+      var item = document.createElement('ul');
+      item.setAttribute('id', 'list');
+      document.body.appendChild(item);
       for(key in depts){
 
+        document.getElementById('list').innerHTML = document.getElementById('list').innerHTML + "<li>" + key + "</li>";
         var questions = getArray();
         console.log(depts[key]);
 
@@ -202,7 +206,7 @@ function handleFiles(file){
     }
 
     function exporter(name, key){
-      window.print();      
+      window.print();
       return;
       var pdf = jsPDF('p', 'pt', 'letter');
       var soure = $(name)[0];
