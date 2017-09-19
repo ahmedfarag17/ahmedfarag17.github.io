@@ -214,7 +214,7 @@ hr{
 .bottom{
   margin-top: 50px;
   width: 100%;
-  height: auto;
+  height: 100%;
   background-color: #D8D8D8;
   color: white;
 }
@@ -281,7 +281,9 @@ hr{
      }
 
 @media screen and (max-width: 480px){
-
+  html{
+    height: 100%;
+  }
   .logo{
     visibility: hidden;
   }
@@ -292,15 +294,17 @@ hr{
   .buttons {
     float: left;
     width: 80%;
-
+    margin-left: 10% !important;
   }
 
   .ahs{
-    margin-left: 20% !important;
+    margin-left: 10% !important;
     margin-right: 20% !important;
   }
 
-  .apps{
-    margin-bottom: 10%;
+  .bottom p{
+    color: white;
+    font-size: 3vw;
+    margin-left: 25%;
   }
 }
