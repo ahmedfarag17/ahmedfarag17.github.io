@@ -279,5 +279,19 @@ hr{
        animation-name: bounceInDown;
      }
 
+@media screen and (max-width: 480px){
 
-      
+  .logo{
+    visibility: hidden;
+  }
+  .download{
+    visibility: hidden;
+  }
+
+  .images{
+    float: left;
+    width: 80%;
+    padding-top: 80%;
+
+  }
+}
