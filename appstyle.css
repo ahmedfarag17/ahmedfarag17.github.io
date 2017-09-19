@@ -215,6 +215,8 @@ hr{
   margin-top: 50px;
   width: 100%;
   height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: #D8D8D8;
   color: white;
 }
@@ -305,6 +307,7 @@ hr{
     margin-left: 10% !important;
     margin-right: 20% !important;
   }
+
 
   .bottom p{
     color: white;
