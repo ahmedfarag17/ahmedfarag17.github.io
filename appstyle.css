@@ -297,6 +297,10 @@ hr{
     overflow: auto;
   }
 
+  .innerApps{
+        box-shadow: 1px 7px 14px 0px #888888;
+  }
+  
   .buttons {
     float: left;
     width: 80%;
