@@ -296,6 +296,11 @@ hr{
   }
 
   .ahs{
+    margin-left: 0%;
     margin-right: 20%;
+  }
+
+  .apps{
+    margin-bottom: 10%;
   }
 }
