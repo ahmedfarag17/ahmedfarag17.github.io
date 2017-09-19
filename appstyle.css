@@ -288,10 +288,13 @@ hr{
     visibility: hidden;
   }
 
-  .images{
+  .buttons {
     float: left;
     width: 80%;
-    padding-top: 80%;
 
+  }
+
+  .ahs{
+    margin-right: 20%;
   }
 }
