@@ -295,6 +295,7 @@ hr{
 
   .apps{
     overflow: auto;
+    width: 90%;
   }
 
   .innerApps{
