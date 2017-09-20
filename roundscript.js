@@ -267,8 +267,8 @@ function handleFiles(file){
 
 
       }
-      document.getElementById('fileContainer').style.marginTop = '0%';
-      document.getElementById('fileContainer').style.marginLeft = '0%';
+      //document.getElementById('fileContainer').style.marginTop = '0%';
+      //document.getElementById('fileContainer').style.marginLeft = '0%';
       document.getElementById('track').innerHTML = globalArray[0];
       document.getElementById('0').disabled = true;
 
