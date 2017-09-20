@@ -45,17 +45,24 @@ function handleFiles(file){
                     }
 
                     if(j > 4){
-                      if(departments[dep][j] == undefined || departments[dep][j] == ""){
-                        departments[dep][j] = data[j];
+
+                      if(departments[dep][j] === undefined || departments[dep][j] === ""){
+                          if(data[j].toLowerCase().includes("find")){
+                            departments[dep][j] = "No findings : " + data[0];
+                          }else{
+                            departments[dep][j] = data[j];
+                          }
+                      }else if(data[j].toLowerCase().includes("find")){
+
+                        departments[dep][j] += ", " + data[0];
                       }
                     }
 
                     //tarr.push(data[j]);
                 }
                 //lines.push(tarr);
-            // console.log(allTextLines[i]);
         }
-      console.log(departments);
+      //console.log(departments);
       buildHTML(departments);
     }
 
@@ -121,7 +128,7 @@ function handleFiles(file){
         var num = track + 1;
         document.getElementById('numbers').innerHTML += "<button onclick='changeDiv(" + track + ")' class='innerNumbers' id='" + track + "'>" + num + "</button>";
         var questions = getArray();
-        console.log(depts[key]);
+        //console.log(depts[key]);
 
 
         globalArray[track] = "";
