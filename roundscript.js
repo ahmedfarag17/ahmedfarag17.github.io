@@ -76,49 +76,90 @@ function handleFiles(file){
 
     }
 
+
+
+    var globalArray = [];
+    var previous = 0;
+
+    function changeDiv(which){
+      document.getElementById(previous).disabled = false;
+      document.getElementById('track').innerHTML = globalArray[which];
+      document.getElementById(which).disabled = true;
+      previous = which;
+    }
+
     function buildHTML(depts){
 
-      var track = 1;
+      var track = 0;
+
+      globalArray = [];
+
       var item = document.createElement('ul');
       item.setAttribute('id', 'list');
       document.body.appendChild(item);
+
+      var divElem = document.createElement('div');
+      divElem.setAttribute('class', 'bod');
+      divElem.setAttribute('id', 'track');
+      document.body.appendChild(divElem);
+
+      divElem = document.createElement('div');
+      divElem.setAttribute('class', 'numbers');
+      divElem.setAttribute('id', 'numbers');
+      document.body.appendChild(divElem);
+
+      newElem = document.createElement('button');
+      var str = "exporter('#')";
+      newElem.setAttribute('onclick', str);
+      newElem.setAttribute('src', 'cmc.jpg');
+      newElem.setAttribute('id', 'pdf');
+      newElem.innerHTML = "Export PDF";
+      document.body.appendChild(newElem);
+
       for(key in depts){
 
-        document.getElementById('list').innerHTML = document.getElementById('list').innerHTML + "<li>" + key + "</li>";
+        var num = track + 1;
+        document.getElementById('numbers').innerHTML += "<button onclick='changeDiv(" + track + ")' class='innerNumbers' id='" + track + "'>" + num + "</button>";
         var questions = getArray();
         console.log(depts[key]);
 
-        var divElem = document.createElement('div');
-        divElem.setAttribute('class', 'bod');
-        divElem.setAttribute('id', track);
 
-        var newElem = document.createElement('img');
-        newElem.setAttribute('class', 'img1');
-        newElem.setAttribute('src', 'cmc.jpg');
-        newElem.setAttribute('id', 'bypassme');
-        divElem.appendChild(newElem);
+        globalArray[track] = "";
+        // var newElem = document.createElement('img');
+        // newElem.setAttribute('class', 'img1');
+        // newElem.setAttribute('src', 'cmc.jpg');
+        // newElem.setAttribute('id', 'bypassme');
+        // divElem.appendChild(newElem);
+        globalArray[track] += "<img src='cmc.jpg' class='img1'>";
 
-        newElem = document.createElement('h2');
-        newElem.innerHTML = "<center>Occupational Safety <br/>- EOC Checklist</center>";
-        divElem.appendChild(newElem);
+        // newElem = document.createElement('h2');
+        // newElem.innerHTML = "<center>Occupational Safety <br/>- EOC Checklist</center>";
+        // divElem.appendChild(newElem);
+        globalArray[track] += "<h2><center>Occupational Safety <br/>- EOC Checklist</center></h2>";
 
-        newElem = document.createElement('h3');
-        newElem.innerHTML = "Location : " + key;
-        divElem.appendChild(newElem);
+        // newElem = document.createElement('h3');
+        // newElem.innerHTML = "Location : " + key;
+        // divElem.appendChild(newElem);
+        globalArray[track] += "<h3>Location : " + key + "</h3>";
 
-        newElem = document.createElement('h3');
-        newElem.innerHTML = "Participants : " + depts[key][0];
-        divElem.appendChild(newElem);
 
-        newElem = document.createElement('h3');
-        newElem.innerHTML = "Date : " + depts[key][1];
-        divElem.appendChild(newElem);
+        // newElem = document.createElement('h3');
+        // newElem.innerHTML = "Participants : " + depts[key][0];
+        // divElem.appendChild(newElem);
+        globalArray[track] += "<h3>Participants : " + depts[key][0]+ "</h3>";
 
-        newElem = document.createElement('br');
-        divElem.appendChild(newElem);
 
-        newElem = document.createElement('hr');
-        divElem.appendChild(newElem);
+        // newElem = document.createElement('h3');
+        // newElem.innerHTML = "Date : " + depts[key][1];
+        // divElem.appendChild(newElem);
+        globalArray[track] += "<h3>Date : " + depts[key][1]+ "</h3><br><hr>";
+
+
+        // newElem = document.createElement('br');
+        // divElem.appendChild(newElem);
+        //
+        // newElem = document.createElement('hr');
+        // divElem.appendChild(newElem);
 
         // document.getElementById('location').innerHTML = "Location : " + key;
         // document.getElementById('who').innerHTML = "Participants : " + depts[key][0];
@@ -126,103 +167,115 @@ function handleFiles(file){
         // var doc = document.getElementById('bod');
         for(var i = 5;i<depts[key].length;i++){
           if(i == 5){//Fire Safety
-            newElem = document.createElement('h2');
-            newElem.setAttribute('class', 'title');
-            newElem.innerHTML = "FIRE SAFETY CHECKLIST";
-            divElem.appendChild(newElem);
+            // newElem = document.createElement('h2');
+            // newElem.setAttribute('class', 'title');
+            // newElem.innerHTML = "FIRE SAFETY CHECKLIST";
+            // divElem.appendChild(newElem);
+            globalArray[track] += "<h2 class='title'>FIRE SAFETY CHECKLIST </h2>";
+
           }else if(i == 19){//Hazardous Materials and Waste
-            newElem = document.createElement('h2');
-            newElem.setAttribute('class', 'title');
-            newElem.innerHTML = "HAZARDOUS MATERIALS AND WASTE CHECKLIST";
-            divElem.appendChild(newElem);
+            // newElem = document.createElement('h2');
+            // newElem.setAttribute('class', 'title');
+            // newElem.innerHTML = "HAZARDOUS MATERIALS AND WASTE CHECKLIST";
+            // divElem.appendChild(newElem);
+            globalArray[track] += "<h2 class='title'>HAZARDOUS MATERIALS AND WASTE CHECKLIST </h2>";
+
           }else if(i == 33){//Infection Prevention
-            newElem = document.createElement('h2');
-            newElem.setAttribute('class', 'title');
-            newElem.innerHTML = "INFECTION PREVENTION CHECKLIST";
-            divElem.appendChild(newElem);
+            // newElem = document.createElement('h2');
+            // newElem.setAttribute('class', 'title');
+            // newElem.innerHTML = "INFECTION PREVENTION CHECKLIST";
+            // divElem.appendChild(newElem);
+            globalArray[track] += "<h2 class='title'>INFECTION PREVENTION CHECKLIST </h2>";
+
           }else if(i == 49){//Medical Equipment Management
-            newElem = document.createElement('h2');
-            newElem.setAttribute('class', 'title');
-            newElem.innerHTML = "MEDICAL EQUIPMENT MANAGEMENT CHECKLIST";
-            divElem.appendChild(newElem);
+            // newElem = document.createElement('h2');
+            // newElem.setAttribute('class', 'title');
+            // newElem.innerHTML = "MEDICAL EQUIPMENT MANAGEMENT CHECKLIST";
+            // divElem.appendChild(newElem);
+            globalArray[track] += "<h2 class='title'>MEDICAL EQUIPMENT MANAGEMENT CHECKLIST</h2>";
+
           }else if(i == 63){//Safety Management
-            newElem = document.createElement('h2');
-            newElem.setAttribute('class', 'title');
-            newElem.innerHTML = "SAFETY MANAGEMENT CHECKLIST";
-            divElem.appendChild(newElem);
+            // newElem = document.createElement('h2');
+            // newElem.setAttribute('class', 'title');
+            // newElem.innerHTML = "SAFETY MANAGEMENT CHECKLIST";
+            // divElem.appendChild(newElem);
+            globalArray[track] += "<h2 class='title'>SAFETY MANAGEMENT CHECKLIST</h2>";
+
           }else if(i == 82){//Security
-            newElem = document.createElement('h2');
-            newElem.setAttribute('class', 'title');
-            newElem.innerHTML = "SECURITY CHECKLIST";
-            divElem.appendChild(newElem);
+            // newElem = document.createElement('h2');
+            // newElem.setAttribute('class', 'title');
+            // newElem.innerHTML = "SECURITY CHECKLIST";
+            // divElem.appendChild(newElem);
+            globalArray[track] += "<h2 class='title'>SECURITY CHECKLIST</h2>";
+
           }else if(i == 93){//Utility Management
-            newElem = document.createElement('h2');
-            newElem.setAttribute('class', 'title');
-            newElem.innerHTML = "UTILITY MANAGEMENT CHECKLIST";
-            divElem.appendChild(newElem);
+            // newElem = document.createElement('h2');
+            // newElem.setAttribute('class', 'title');
+            // newElem.innerHTML = "UTILITY MANAGEMENT CHECKLIST";
+            // divElem.appendChild(newElem);
+            globalArray[track] += "<h2 class='title'>UTILITY MANAGEMENT CHECKLIST</h2>";
+
           }else if(i == 105){//Additional Comments
-            newElem = document.createElement('h4');
-            newElem.setAttribute('class', 'question');
-            newElem.innerHTML = "Additional Comments?";
-            divElem.appendChild(newElem);
-            newElem = document.createElement('i');
-            newElem.innerHTML = depts[key][i];
-            divElem.appendChild(newElem);
-            newElem = document.createElement('br');
-            divElem.appendChild(newElem);
-            newElem = document.createElement('br');
-            divElem.appendChild(newElem);
-            newElem = document.createElement('br');
-            divElem.appendChild(newElem);
+            // newElem = document.createElement('h4');
+            // newElem.setAttribute('class', 'question');
+            // newElem.innerHTML = "Additional Comments?";
+            // divElem.appendChild(newElem);
+            globalArray[track] += "<h4 class='question'>Additional Comments?</h4><i>" + depts[key][i] + "</i><br><br><br>";
+
+            // newElem = document.createElement('i');
+            // newElem.innerHTML = depts[key][i];
+            // divElem.appendChild(newElem);
+            // newElem = document.createElement('br');
+            // divElem.appendChild(newElem);
+            // newElem = document.createElement('br');
+            // divElem.appendChild(newElem);
+            // newElem = document.createElement('br');
+            // divElem.appendChild(newElem);
           }else{//Answers to questions
-            newElem = document.createElement('h4');
-            newElem.setAttribute('class', 'question');
-            newElem.innerHTML = questions[0];
+            // newElem = document.createElement('h4');
+            // newElem.setAttribute('class', 'question');
+            // newElem.innerHTML = questions[0];
+            globalArray[track] += "<h4 class='question'>"+ questions[0] + "</h4><i>";
+
             questions.shift();
-            divElem.appendChild(newElem);
-            newElem = document.createElement('i');
+            // divElem.appendChild(newElem);
+            // newElem = document.createElement('i');
             if(depts[key][i] == ""){
-              newElem.innerHTML = " No Answer "
+              globalArray[track] += "No Answer </i><br>";
+              //newElem.innerHTML = " No Answer "
             }else{
-              newElem.innerHTML = depts[key][i];
+                globalArray[track] += depts[key][i] + "</i><br>";
+              //newElem.innerHTML = depts[key][i];
             }
-            divElem.appendChild(newElem);
-            newElem = document.createElement('br');
-            divElem.appendChild(newElem);
+            // divElem.appendChild(newElem);
+            // newElem = document.createElement('br');
+            // divElem.appendChild(newElem);
 
 
           }
         }
-        document.body.appendChild(divElem);
-        newElem = document.createElement('button');
-        var str = "exporter('#" + track + "', '"+ key+ " " + depts[key][1] + "')";
-        track+=2;
-        newElem.setAttribute('onclick', str);
-        newElem.setAttribute('src', 'cmc.jpg');
-        newElem.innerHTML = "Export PDF";
-        document.body.appendChild(newElem);
+        //document.body.appendChild(divElem);
+
+        track++;
+
 
       }
+
+      document.getElementById('track').innerHTML = globalArray[0];
+      document.getElementById('0').disabled = true;
+
     }
 
     function exporter(name, key){
+      document.getElementById('fileContainer').style.visibility = 'hidden';
+      document.getElementById('numbers').style.visibility = 'hidden';
+      document.getElementById('pdf').style.visibility = 'hidden';
       window.print();
+      document.getElementById('fileContainer').style.visibility = 'visible';
+      document.getElementById('numbers').style.visibility = 'visible';
+      document.getElementById('pdf').style.visibility = 'visible';
       return;
-      var pdf = jsPDF('p', 'pt', 'letter');
-      var soure = $(name)[0];
-      var specialElementHandlers = {
-        '#bypassme': function(element, renderer){
-          return true;
-        }
-      }
 
-      margins = {
-        top: 10, left: 10, width: 1500
-      };
-
-      pdf.fromHTML(soure, margins.left, margins.top, {'width': margins.width, 'elementHandlers' : specialElementHandlers}, function (dispose) {
-        pdf.save(key +".pdf");
-      })
 
     }
 
