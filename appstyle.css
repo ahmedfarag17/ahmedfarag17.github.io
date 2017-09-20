@@ -10,6 +10,9 @@ html, body {
   background-color: #F8991B;
 }
 
+.downloadButton{
+  width: 105px;
+}
 
       .ah{
         float: left;
