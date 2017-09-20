@@ -33,13 +33,13 @@ function handleFiles(file){
                 var dep;
                 for (var j=0; j<data.length; j++) {
                     if(j == 1){
-                      if(departments[data[1]]){
+                      if(departments[data[1]]){ //If the department is already a key for the array, add to whatever names are there already
                         departments[data[1]][0] = departments[data[1]][0] + ", " + data[0];
                         dep = data[1];
-                      }else{
+                      }else{ //Not a key so make a new array in that spot and add the first name(data[0]) to it and the date(data[4])
                         departments[data[1]] = new Array(106);
                         departments[data[1]][0] = data[0];
-                        departments[data[1]][1] = data[4]
+                        departments[data[1]][1] = data[4].substring(0,7);
                         dep = data[1];
                       }
                     }
