@@ -10,6 +10,24 @@ html, body {
   background-color: #F8991B;
 }
 
+.row::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col-1{
+  width: 25%;
+  height: 100px;
+  float: left;
+}
+
+.col-2{
+  width: 50%;
+    height: 100px;
+    float: left;
+}
+
 .downloadButton{
   width: 105px;
   margin-right: 10px;
@@ -17,7 +35,7 @@ html, body {
 
       .ah{
         float: left;
-        margin-left: 5%;
+        margin-left: 10%;
         margin-top: 10px;
         -webkit-animation: bounceInDown 1.5s; /* Safari, Chrome and Opera > 12.1 */
                -moz-animation: bounceInDown 1.5s; /* Firefox < 16 */
@@ -27,7 +45,8 @@ html, body {
       }
 
       .logo{
-        margin-left: 20%;
+        margin: auto;
+        display: block;
         -webkit-animation: bounceInDown 1s; /* Safari, Chrome and Opera > 12.1 */
                -moz-animation: bounceInDown 1s; /* Firefox < 16 */
                 -ms-animation: bounceInDown 1s; /* Internet Explorer */
@@ -37,7 +56,7 @@ html, body {
       .download{
         float: right;
         margin-top: 25px;
-        margin-right: 5%;
+        margin-right: 10%;
         background-color: #FBB55F; /* Green */
         border: none;
         color: white;
@@ -303,13 +322,13 @@ hr{
   }
 
   .innerApps{
-      box-shadow: 1px 2px 0px 0px #888888;  
+      box-shadow: 1px 2px 0px 0px #888888;
   }
-  
+
   h2{
     display: inline-block;
   }
-  
+
   .buttons {
     float: left;
     width: 80%;
@@ -324,7 +343,7 @@ hr{
   p{
     padding-left: 5px;
   }
-  
+
   .bottom{
     margin-top: 0px;
   }
