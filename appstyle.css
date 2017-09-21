@@ -331,6 +331,10 @@ hr{
     display: inline-block;
   }
 
+  .ahs{
+    margin: 0 !important;
+  }
+
   .buttons {
     width: 50%;
     display: block;
