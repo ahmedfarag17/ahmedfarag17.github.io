@@ -23,6 +23,8 @@ function handleFiles(file){
     }
 
     function processData(csv) {
+      // console.log(csv);
+      // return;
         var allTextLines = csv.split(/\r\n|\n/);
         var lines = [];
         var departments = [];
@@ -33,6 +35,7 @@ function handleFiles(file){
                 var dep;
                 for (var j=0; j<data.length; j++) {
                     data[j] = data[j].replace('\"', '');
+                    data[j] = data[j].replace('\"', '');
                     if(j == 1){
                       if(departments[data[1]]){ //If the department is already a key for the array, add to whatever names are there already
                         departments[data[1]][0] = departments[data[1]][0] + ", " + data[0];
@@ -40,6 +43,7 @@ function handleFiles(file){
                       }else{ //Not a key so make a new array in that spot and add the first name(data[0]) to it and the date(data[4])
                         departments[data[1]] = new Array(106);
                         departments[data[1]][0] = data[0];
+                        data[4] = data[4].replace('\"', '');
                         departments[data[1]][1] = data[4].substring(0,7);
                         dep = data[1];
                       }
