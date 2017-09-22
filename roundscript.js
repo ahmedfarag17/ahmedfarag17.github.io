@@ -27,7 +27,7 @@ function handleFiles(file){
         var lines = [];
         var departments = [];
         console.log("AllTextLines Length = " + allTextLines.length);
-        for (var i=1; i<allTextLines.length; i++) {
+        for (var i=2; i<allTextLines.length; i++) {
             var data = allTextLines[i].split(',');
                 var tarr = [];
                 var dep;
