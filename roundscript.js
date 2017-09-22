@@ -44,7 +44,7 @@ function handleFiles(file){
                         departments[data[1]] = new Array(106);
                         departments[data[1]][0] = data[0];
                         data[4] = data[4].replace('\"', '');
-                        departments[data[1]][1] = data[4].substring(0,7);
+                        departments[data[1]][1] = data[4].substring(0,9);
                         dep = data[1];
                       }
                     }
