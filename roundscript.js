@@ -32,6 +32,7 @@ function handleFiles(file){
                 var tarr = [];
                 var dep;
                 for (var j=0; j<data.length; j++) {
+                    data[j] = data[j].replace('\"', '');
                     if(j == 1){
                       if(departments[data[1]]){ //If the department is already a key for the array, add to whatever names are there already
                         departments[data[1]][0] = departments[data[1]][0] + ", " + data[0];
