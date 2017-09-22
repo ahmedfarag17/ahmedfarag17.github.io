@@ -44,22 +44,25 @@ function handleFiles(file){
                         departments[data[1]] = new Array(106);
                         departments[data[1]][0] = data[0];
                         data[4] = data[4].replace('\"', '');
-                        departments[data[1]][1] = data[4].substring(0,9);
+                        departments[data[1]][1] = data[4].substring(0,7);
                         dep = data[1];
                       }
                     }
 
                     if(j > 4){
-
+                      // console.log(data[j] + " for " + data[0] + " in " + dep);
                       if(departments[dep][j] === undefined || departments[dep][j] === ""){
                           if(data[j].toLowerCase().includes("find")){
+                            // console.log("No findings clean " + data[0] + " for " + dep);
                             departments[dep][j] = "No findings : " + data[0];
                           }else{
                             departments[dep][j] = data[j];
                           }
-                      }else if(data[j].toLowerCase().includes("find")){
-
+                      }else if(j==105 && data[j].toLowerCase().includes("no")){
+                        // console.log("No findings after " + data[0] + " for " + dep + " before it equaled " + departments[dep][j]);
                         departments[dep][j] += ", " + data[0];
+                        // console.log("No findings after " + data[0] + " for " + dep + " after it equaled " + departments[dep][j]);
+
                       }
                     }
 
@@ -79,7 +82,7 @@ function handleFiles(file){
       "Are stretchers, IV poles and other mobile equipment visually clean and dust free?", "Is the equipment in patient care areas \"tape free\"?", "Are medications dated and labeled? Are all IV & Tubings labeled appropriately?", "Are there no outside shipping boxes being used for storage?", "There is an adequate splash zone with no storage around the sink?", "Are cabinets under sink are free from storage?", "Does the bottom shelf on all carts and storage racks have a solid surface?", "Are all patient supplies within expiration dates?",
       "Are all pressure differentials appropriate and is the Ball in the Wall reading correct?", "Are the inspection tags current with date of next inspection?", "Is medical equipment clean, identified and stored properly? Is it in good overall condition?", "Are crash carts or carts with sharps and meds locked?", "Are code cart logs documented consistently and checked at least daily?", "Are medical equipment consumables within expiration dates?", "Are blanket warmers and fluid warmers temperatures withing range? Are logs complete for fluid warmers?",
       "Are plugs, cords, switches, outlets and power cords free from visible damage?", "Are all power cords hospital grade?", "Has the AED been inspected and is prepared in event of an emergency?", "Are all workstations on wheels in good overall condition?", "Are all electrical beds free from visible damage?", "Is temperature in medication refrigerators checked daily?", "Are thermometers in all refrigerators with alarms on and are the temperature logs complete?", "Are the floors and carpets in good physical condition? Clean and dry? Free from fall/trip hazards?",
-      "Are wet floor signs used properly?", "Are all cords and wires managed properly?", "Are the walls painted and in good physical condition?", "Are electrical plates /covers in place and in good condition?", "Are ceiling tiles in place and in good condition, free from dirt, dust and/or stains?", "Are vents and air ducts dust free?", "Are there any boxes, storage on the floor?", "Are storage areas and work areas neat, clean and well lit?", "Are stairwells free of obstruction?", "Are soiled utility rooms sanitary?", "Are restroom areas clean and orderly?",
+      "Are wet floor signs used properly?", "Are all cords and wires managed properly?", "Are the walls painted and in good physical condition?", "Are electrical plates /covers in place and in good condition?", "Are ceiling tiles in place and in good condition, free from dirt, dust and/or stains?", "Are vents and air ducts dust free?", "There is no boxes or storage on the floor.", "Are storage areas and work areas neat, clean and well lit?", "Are stairwells free of obstruction?", "Are soiled utility rooms sanitary?", "Are restroom areas clean and orderly?",
       "Are cleaning agents properly stored?", "Are refrigerators clean? And ice machines?",
       "Is lighting adequate?", "Is furniture in good repair?", "Does staff know how to access safety manuals?", "Can staff name their safety officers?", "Are all employees wearing ID badges in plain view?", "Are \"Breakaway\" lanyards in use if necessary?", "Are all computers that are not in use, logged out?", "Can staff explain the procedure to get help in the event of a security emergency?", "Can staff explain procedures for Code Lockdown? Location of safe room and panic button (if available)?", "Can staff explain the procedures for adopt an exit (Code Pink, Code Adam, Eloped or endangered missing person)?", "Are security measures in place and can staff explain them and their role in providing security for patients?", "Can staff explain procedures for a Code Green?", "Do staff know where to find a copy of the emergency management plan, department specific plan, Red Centrex (system failure) phone(s) and directory?",
       "If a building evacuation is announced , what would you do, where is your staging area, where is the nearest smoke compartment evacuation area?", "Are emergency power outlets clearly marked by red covers or labelled outlets and are they being used for critical equipment only?", "Are mechanical/electrical rooms or exposed distribution panels kept locked, except to essential personnel?", "Does the area only use approved or medical grade powerstrips and are they properly tied back and secured to avoid trip hazards?",
