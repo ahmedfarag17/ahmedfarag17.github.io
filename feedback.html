@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <style>
+      body{
+        background-color: gray;
+      }
+      .feedback{
+        height:500px;
+        width: 700px;
+        background-color: white;
+        margin: 0 auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,.5);
+      }
+      div{
+        display: block;
+      }
+
+  
+    </style>
+    <script>
+      function test(which){
+        console.log(which);
+      }
+
+      function submitJS(){
+        console.log("submitted");
+        alert("The form was submitted at " + new Date());
+      }
+
+      function check(value){
+        if(value == "No"){
+          document.getElementById("helpMe").style.visibility = "hidden";
+        }else{
+          console.log('sup');
+          document.getElementById("helpMe").style.visibility = "visible";
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', function(){
+        document.forms["myForm"].addEventListener('submit', submitJS);
+      });
+    </script>
+  </head>
+  <body>
+    <div class="feedback">
+      <h1> APP FEEDBACK </h1>
+      <form name="myForm">
+        <div>
+            <div style="display: inline-block;">
+              <input type="radio" name="help" value="very" onclick="document.getElementById('text').required = false;"><br>Very Helpful
+            </div>
+            <div style="display: inline-block;">
+                <input type="radio" name="help" value="somewhat" onclick="document.getElementById('text').required = true;"><br>Somewhat Helpful
+            </div>
+            <div style="display: inline-block;">
+                  <input type="radio" name="help" value="not" onclick="document.getElementById('text').required = true;"><br>Not Helpful
+            </div>
+        </div>
+        <div>
+          <h2 style="font-size: 18px;"><strong>If you have any comments or suggestions, please submit below:</strong></h2>
+          <textarea rows="3" cols="30" class="survey-comment" id="text" name="option_textarea_216_501" value="501" style="color: #000000; margin-top: 5px; width: 100%;"></textarea>
+        </div>
+        <div>
+          <h2 style="font-size: 18px;"><strong>Would you like to be contacted about your experience?</strong></h2>
+          <select onclick="check(value)">
+            <option value="No" >No</option>
+            <option value="Yes">Yes</option>
+          </select>
+          <textarea rows="3" cols="30" class="survey-comment" id="helpMe" name="option_textarea_216_501" value="501" style="color: #000000; margin-top: 5px; width: 100%; visibility: hidden;"></textarea>
+        </div>
+        <input type="submit" class="btn survey-submit-button" style="margin-top: 20px;">
+      </form>
+
+    </div>
+  </body>
+</html>
